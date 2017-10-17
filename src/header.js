@@ -5,10 +5,8 @@ export default class Header extends Component {
     return (
       <div>
         <ul>
-          <li>
-            <Link to="/team">Team list</Link>
-            <br />
-          </li>
+          <Link to="/team">Team list</Link>
+          <br />
         </ul>
       </div>
     );

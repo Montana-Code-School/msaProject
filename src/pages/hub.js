@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-export default class Routes extends Component {
+export default class Hub extends Component {
   render() {
     return (
       <select>

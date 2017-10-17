@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-export default class msaTeamFind extends Component {
+export default class MsaTeamFind extends Component {
   buttonClicked() {
     fetch("/team", {
       method: "GET",
@@ -15,9 +15,10 @@ export default class msaTeamFind extends Component {
     console.log(this.props.location.pathname);
     return (
       <div>
-        <p>Welcome to the Mad library</p>
+        <h1>Welcome to the Mad library</h1>
         <button onClick={this.buttonClicked.bind(this)}>Submit</button>
       </div>
     );
   }
 }
+//<button onClick={this.buttonClicked.bind(this)}>Submit</button>
