@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import { Link } from "react-router-dom";
+import Login from "./pages/login";
 import Hub from "./pages/hub";
 import MsaTeamFind from "./components/msaTeamFind";
 //import Routes from "./routes";
@@ -13,11 +15,14 @@ export default class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title">Welcome to Softball Mania</h1>
-            <Header />
+            <Link to="/team">Team list</Link>
+            <br />
+            <Link to="/login">Login</Link>
           </header>
           <Switch>
             <Route exact path="/" component={Hub} />
             <Route path="/team" component={MsaTeamFind} />
+            <Route path="/login" component={Login} />
           </Switch>
         </div>
       </Router>
