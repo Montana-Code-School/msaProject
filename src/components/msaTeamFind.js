@@ -1,14 +1,25 @@
 import React, { Component } from "react";
 export default class MsaTeamFind extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { team_name: "" };
+  }
+
   buttonClicked() {
     fetch("/team", {
       method: "GET",
       headers: {
-        _id: "59e51a382c78420c0f38d83f"
+        _id: "59e64141c945781836e1ffcd"
       }
     })
-      .then(response => response.json())
-      .then(json => console.log(json));
+      .then(response => {
+        console.log(response);
+        return response.json();
+      })
+      .then(json => {
+        console.log(json);
+        this.setState({ team_name: json[0].team_name });
+      });
   }
 
   render() {
@@ -16,7 +27,8 @@ export default class MsaTeamFind extends Component {
     return (
       <div>
         <h1>Welcome to the Mad library</h1>
-        <button onClick={this.buttonClicked.bind(this)}>Submit</button>
+        <button onClick={this.buttonClicked.bind(this)}>Find team</button>
+        <h5>{this.state.team_name}</h5>
       </div>
     );
   }

@@ -18,8 +18,8 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 app.post("/msa", function(req, res) {
   // create a sample user
   var nick = new MsaTeam({
-    team_name: "matt",
-    team_league_OID: "Mens"
+    team_name: "gabe",
+    team_league_OID: "Womens"
   });
   nick.save(function(err) {
     if (err) throw err;
@@ -39,7 +39,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/team", function(req, res) {
-  MsaTeam.find({}, function(err, msaTeam) {
+  MsaTeam.find({ _id: "59e6413a5fa3a6182c1bffc5" }, function(err, msaTeam) {
     res.json(msaTeam);
   });
 });
