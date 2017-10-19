@@ -33,7 +33,7 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 //     res.json({ success: true });
 //   });
 // });
-app.post("/msa", msa_user_controller.user);
+app.post("/msa", msa_team_controller.team);
 
 /*
 app.get("/", function(req, res) {
