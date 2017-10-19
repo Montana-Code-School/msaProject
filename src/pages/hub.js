@@ -1,3 +1,5 @@
+//displays our home page with a drop down button
+
 import React, { Component } from "react";
 export default class Hub extends Component {
   render() {

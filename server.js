@@ -1,10 +1,15 @@
 var mongoose = require("mongoose");
 var express = require("express");
+var router = express.Router();
+var msa_team_controller = require("./controllers/msaTeamController");
+var msa_user_controller = require("./controllers/msaUserController");
 var MsaTeam = require("./models/msaTeam");
 var bodyParser = require("body-parser");
+//var routes = require("./routes");
 var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+// app.use("/msa")
 // mongoose.connect(config.database, {
 //   useMongoClient: true
 // });
@@ -15,20 +20,22 @@ mongoose.connect(msaMongoDb, {
   useMongoClient: true
 });
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
-app.post("/msa", function(req, res) {
-  // create a sample user
-  var nick = new MsaTeam({
-    team_name: "gabe",
-    team_league_OID: "Womens"
-  });
-  nick.save(function(err) {
-    if (err) throw err;
+//app.post("/msa", //function(req, res) {
+//   // create a sample user
+//   var nick = new MsaTeam({
+//     team_name: "gabe",
+//     team_league_OID: "Womens"
+//   });
+//   nick.save(function(err) {
+//     if (err) throw err;
+//
+//     console.log("User saved successfully");
+//     res.json({ success: true });
+//   });
+// });
+app.post("/msa", msa_user_controller.user);
 
-    console.log("User saved successfully");
-    res.json({ success: true });
-  });
-});
-
+/*
 app.get("/", function(req, res) {
   console.log("A dark horse appears and then he eats you", __dirname);
   res.send(
@@ -43,5 +50,5 @@ app.get("/team", function(req, res) {
     res.json(msaTeam);
   });
 });
-
+*/
 app.listen(port);
