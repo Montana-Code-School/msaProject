@@ -30,7 +30,4 @@ var MsaUserSchema = mongoose.Schema({
 // });
 
 //Export the Model
-module.exports = {
-  model: mongoose.model("MsaUser", MsaUserSchema),
-  userSchema: MsaUserSchema
-};
+module.exports = mongoose.model("MsaUser", MsaUserSchema);
