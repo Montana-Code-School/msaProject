@@ -3,18 +3,18 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var MsaUserSchema = mongoose.Schema({
-  user_name: { type: String, required: true },
+  //user_name: { type: String, required: true },
   user_password: { type: String, required: true },
+  user_email: { type: String, required: true },
   user_first_name: { type: String, required: true },
   user_last_name: { type: String, required: true },
   user_privilege: {
     type: String,
     required: true,
-    enum: ["MsaAdminPriv", "MsaPublisherPriv", "MsaUserPriv"],
-    default: "MsaUserPriv"
+    enum: ["MsaAdmin", "MsaCaptain", "MsaPlayer"],
+    default: "MsaPlayer"
   },
-  user_created_date: { type: Date, default: Date.now },
-  user_team_name_OID: [{ type: Schema.ObjectId, ref: "MsaTeam" }]
+  user_created_date: { type: Date, default: Date.now }
 });
 
 // // Virtual for the user profile - using the perm id

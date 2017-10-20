@@ -20,35 +20,12 @@ mongoose.connect(msaMongoDb, {
   useMongoClient: true
 });
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
-//app.post("/msa", //function(req, res) {
-//   // create a sample user
-//   var nick = new MsaTeam({
-//     team_name: "gabe",
-//     team_league_OID: "Womens"
-//   });
-//   nick.save(function(err) {
-//     if (err) throw err;
-//
-//     console.log("User saved successfully");
-//     res.json({ success: true });
-//   });
-// });
-app.post("/msa", msa_team_controller.team);
+//msa user
+app.post("/createUser", msa_user_controller.createUser);
 
-/*
-app.get("/", function(req, res) {
-  console.log("A dark horse appears and then he eats you", __dirname);
-  res.send(
-    "Hello! The anrgy cats are goming to eat us is at http://localhost:" +
-      port +
-      "/api"
-  );
-});
+// msa team
+app.post("/createTeam", msa_team_controller.createTeam);
+app.delete("/deleteTeam", msa_team_controller.deleteTeam);
+app.put("/editTeam", msa_team_controller.editTeam);
 
-app.get("/team", function(req, res) {
-  MsaTeam.find({ _id: "59e6410a85acfd180655fc47" }, function(err, msaTeam) {
-    res.json(msaTeam);
-  });
-});
-*/
 app.listen(port);

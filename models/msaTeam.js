@@ -19,9 +19,11 @@ var MsaTeamSchema = mongoose.Schema({
   team_owner_user_name_OID: {
     type: String
   },
-  team_member_user_name_OID: {
-    type: String
-  }
+  team_member_user_name_OID: [
+    {
+      type: String
+    }
+  ]
 });
 
 //Export the Model
