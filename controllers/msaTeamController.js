@@ -1,4 +1,4 @@
-var MsaUser = require("../models/msaUser");
+var MsaUser = require("../models/msaUser"); //for populate
 var MsaTeam = require("../models/msaTeam");
 
 exports.createTeam = function(req, res) {
@@ -25,10 +25,33 @@ exports.deleteTeam = function(req, res) {
 
 exports.editTeam = function(req, res) {
   console.log(req.body);
+  if (req.body.imLazy) {
+    req.body.team_member_user_name_OID = req.body.team_member_user_name_OID[0].split(
+      " "
+    );
+  }
   MsaTeam.findOneAndUpdate({ _id: req.body._id }, req.body, function(
     err,
     team
   ) {
+    console.log(team);
+    res.json(team);
+  });
+};
+
+exports.viewTeams = function(req, res) {
+  //console.log(req.params._id);
+  MsaTeam.find({}, "team_name")
+    .sort([["team_name", "ascending"]])
+    .exec(function(err, teams) {
+      console.log(teams);
+      res.json(teams);
+    });
+};
+
+exports.viewTeam = function(req, res) {
+  console.log(req.params._id);
+  MsaTeam.findById(req.params._id, function(err, team) {
     console.log(team);
     res.json(team);
   });

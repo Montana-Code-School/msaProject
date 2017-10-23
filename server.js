@@ -22,10 +22,14 @@ mongoose.connect(msaMongoDb, {
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 //msa user
 app.post("/createUser", msa_user_controller.createUser);
+//app.delete("/deleteUser", msa_user_controller.deleteUser);
 
 // msa team
 app.post("/createTeam", msa_team_controller.createTeam);
 app.delete("/deleteTeam", msa_team_controller.deleteTeam);
 app.put("/editTeam", msa_team_controller.editTeam);
+app.get("/viewTeams", msa_team_controller.viewTeams);
+//put variable routes last
+app.get("/viewTeam/:_id", msa_team_controller.viewTeam); //sending info via header
 
 app.listen(port);
