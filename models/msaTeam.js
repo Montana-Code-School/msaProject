@@ -16,6 +16,7 @@ var MsaTeamSchema = mongoose.Schema({
     type: Date,
     default: Date.now
   },
+  // TODO type set to default in order to populate
   team_owner_user_name_OID: {
     type: String
   },

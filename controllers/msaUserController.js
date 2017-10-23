@@ -2,44 +2,12 @@ var MsaUser = require("../models/msaUser");
 var MsaTeam = require("../models/msaTeam");
 
 exports.createUser = function(req, res) {
-  console.log(req.body);
-  var userPassword = req.body.userPassword,
-    userEmail = req.body.userEmail,
-    userFirstName = req.body.userFirstName,
-    userLastName = req.body.userLastName,
-    userPrivilege = req.body.userPrivilege;
-
-  msaUserDetails = {
-    user_password: userPassword,
-    user_email: userEmail,
-    user_first_name: userFirstName,
-    user_last_name: userLastName,
-    user_privilege: userPrivilege
-  };
-
-  let msaUser = new MsaUser(msaUserDetails);
-
-  msaUser.save(function(err) {
-    if (err) {
-      console.log(err);
-      //
-      res.json({ success: false });
-    } else {
-      console.log("User saved successfully");
-      res.json({ success: true });
-    }
-  });
-};
-
-/*
-exports.createUser = function(req, res) {
   //construct the main create user function
   console.log(req.body);
-  //function msaUserCreate()
 
   MsaUser.create(req.body, function(err) {
     if (err) {
-      console.log(err);
+      //console.log(err);
       res.json({ success: false });
     } else {
       console.log("Team saved successfully");
@@ -47,5 +15,39 @@ exports.createUser = function(req, res) {
     }
   });
 };
-*/
-//exports.deleteUser
+
+exports.deleteUser = function(req, res) {
+  MsaUser.remove({ _id: req.body._id }, function(err, result) {
+    res.json(result);
+  });
+};
+
+exports.editUser = function(req, res) {
+  console.log(req.body);
+
+  MsaUser.findOneAndUpdate({ _id: req.body._id }, req.body, function(
+    err,
+    user
+  ) {
+    console.log(user);
+    res.json(user);
+  });
+};
+
+exports.viewUsers = function(req, res) {
+  //console.log(req.params._id);
+  MsaUser.find({}, "user_first_name")
+    .sort([["user_first_name", "ascending"]]) //TODO why is this order strange
+    .exec(function(err, users) {
+      console.log(users);
+      res.json(users);
+    });
+};
+
+exports.viewUser = function(req, res) {
+  console.log(req.params._id);
+  MsaUser.findById(req.params._id, function(err, user) {
+    console.log(user);
+    res.json(user);
+  });
+};
