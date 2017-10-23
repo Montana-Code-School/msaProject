@@ -25,6 +25,7 @@ app.post("/createUser", msa_user_controller.createUser);
 app.delete("/deleteUser", msa_user_controller.deleteUser);
 app.put("/editUser", msa_user_controller.editUser);
 app.get("/viewUsers", msa_user_controller.viewUsers);
+
 app.get("/viewUser/:_id", msa_user_controller.viewUser);
 
 // msa team
@@ -32,6 +33,7 @@ app.post("/createTeam", msa_team_controller.createTeam);
 app.delete("/deleteTeam", msa_team_controller.deleteTeam);
 app.put("/editTeam", msa_team_controller.editTeam);
 app.get("/viewTeams", msa_team_controller.viewTeams);
+
 //put variable routes last
 app.get("/viewTeam/:_id", msa_team_controller.viewTeam); //sending info via header
 

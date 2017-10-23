@@ -15,13 +15,13 @@ export default class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title">Welcome to Softball Mania</h1>
-            <Link to="/team">Team list</Link>
+            <Link to="/viewTeams">Team list</Link>
             <br />
             <Link to="/login">Login</Link>
           </header>
           <Switch>
             <Route exact path="/" component={Hub} />
-            <Route path="/team" component={MsaTeamFind} />
+            <Route path="/viewTeams" component={MsaTeamFind} />
             <Route path="/login" component={Login} />
           </Switch>
         </div>
@@ -29,14 +29,7 @@ export default class App extends Component {
     );
   }
 }
-// <Router>
-//   <div className="App">
-//     <header className="App-header">
-//       <h1 className="App-title">Welcome to Softball Mania</h1>
-//       <Header />
-//     </header>
-//     <div>
-//       <Routes />
-//     </div>
-//   </div>
-// </Router>
+
+/*
+
+*/

@@ -2,23 +2,25 @@ import React, { Component } from "react";
 export default class MsaTeamFind extends Component {
   constructor(props) {
     super(props);
-    this.state = { team_name: "" };
+    //this.state = { team_name: "" };
+    this.state = { teamList: [] };
   }
 
-  buttonClicked() {
-    fetch("/team", {
-      method: "GET",
-      headers: {
-        _id: "59e64141c945781836e1ffcd"
-      }
+  componentDidMount() {
+    fetch("/viewTeams", {
+      method: "GET" //,
+      //  headers: {
+      //  _id: "59ea5bf2af93ae11af9c6eb9"
+      //}
     })
       .then(response => {
         console.log(response);
         return response.json();
       })
-      .then(json => {
-        console.log(json);
-        this.setState({ team_name: json[0].team_name });
+      .then(teamList => {
+        console.log(teamList);
+        // this.setState({ team_name: json.team_name });
+        this.setState({ teamList: teamList });
       });
   }
 
@@ -26,11 +28,20 @@ export default class MsaTeamFind extends Component {
     console.log(this.props.location.pathname);
     return (
       <div>
-        <h1>Welcome to the Mad library</h1>
-        <button onClick={this.buttonClicked.bind(this)}>Find team</button>
-        <h5>{this.state.team_name}</h5>
+        <h1>Missoula Softball Team List</h1>
+        <ul>
+          {this.state.teamList.map(function(team) {
+            return <li key={team._id}>{team.team_name}</li>;
+          })}
+        </ul>
       </div>
     );
   }
 }
+//<h5>{this.state.team_list}</h5>
+
+// got rid of buttons in render code saved & commented out down below
+
 //<button onClick={this.buttonClicked.bind(this)}>Submit</button>
+
+//<button onClick={this.buttonClicked.bind(this)}>List Teams</button>
