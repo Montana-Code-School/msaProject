@@ -7,7 +7,7 @@ export default class MsaTeamFind extends Component {
   }
 
   componentDidMount() {
-    fetch("/viewTeams", {
+    fetch("/get/viewTeams", {
       method: "GET" //,
       //  headers: {
       //  _id: "59ea5bf2af93ae11af9c6eb9"
@@ -31,10 +31,22 @@ export default class MsaTeamFind extends Component {
         <h1>Missoula Softball Team List</h1>
 
         {this.state.teamList.map(function(team) {
-          return <h5 key={team._id}>{team.team_name}</h5>;
+          return (
+            <div>
+              <a
+                href={"http://localhost:3000/viewTeam/" + team._id}
+                key={team._id}
+              >
+                {team.team_name}
+              </a>
+            </div>
+          );
         })}
       </div>
     );
   }
 }
-//h5 key={team._id}>{team.team_name}</h5
+//  {this.state.teamList.map(function(team) {
+//     return <h5 key={team._id}>{team.team_name}</h5>;
+//   })}
+// href="http://localhost/viewTeam/" + team._id

@@ -14,7 +14,7 @@ export default class MsaTeamFind extends Component {
   }
 
   componentDidMount() {
-    fetch("/viewTeam/" + this.props.match.params._id, {
+    fetch("/get/viewTeam/" + this.props.match.params._id, {
       method: "GET" //,
       //  headers: {
       //  _id: "59ea5bf2af93ae11af9c6eb9"
