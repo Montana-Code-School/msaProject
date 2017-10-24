@@ -1,0 +1,410 @@
+{
+	"id": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+	"name": "msa",
+	"description": "",
+	"order": [
+		"de3fe001-2645-5303-3cac-4a660170bb6d",
+		"1e3cf48e-9fb0-b148-5d24-a9c987b29f8d",
+		"fc055e9c-fed8-9840-efb1-b2b46f61eaac",
+		"2b731a50-316d-cc6f-4ec3-8076776af1c2",
+		"d42a3165-a88a-5610-f9f5-32370417211c",
+		"3d12073f-4103-6c09-b344-cf651ebacd51",
+		"6a8b4670-0ff2-ec7d-4bef-3579c5d3106f",
+		"ae6ccbcf-c4c3-b296-f2f0-798c050d99e6",
+		"60ece5fc-8be7-776e-b533-4f376873e4cf"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1508787219557,
+	"owner": "3003275",
+	"public": false,
+	"requests": [
+		{
+			"id": "1e3cf48e-9fb0-b148-5d24-a9c987b29f8d",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/editUser",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+			"data": [
+				{
+					"key": "_id",
+					"value": "59ea2e4bee3d9c0ef83e5d94",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_first_name",
+					"value": "Kathrune",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8080/editUser",
+			"description": "used for editing a user",
+			"descriptionFormat": "html",
+			"time": 1508788534334,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "2b731a50-316d-cc6f-4ec3-8076776af1c2",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/viewUsers",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+			"data": [
+				{
+					"key": "user_first_name",
+					"value": "Kathrune",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_last_name",
+					"value": "Goober",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_email",
+					"value": "goob@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_password",
+					"value": "123qweasdzxc",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_privilege",
+					"value": "MsaAdmin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8080/viewUsers",
+			"description": "used for viewing users",
+			"descriptionFormat": "html",
+			"time": 1508789559443,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "3d12073f-4103-6c09-b344-cf651ebacd51",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/post/createGame",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+			"data": [
+				{
+					"key": "game_date",
+					"value": "1/1/2017 12:25",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "game_home_team_OID",
+					"value": "59ea30ef14cf6d0f5a3338bc",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "game_visitor_team_OID",
+					"value": "59ea30f914cf6d0f5a3338bd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "game_field_OID",
+					"value": "MC 1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "game_home_team_score",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "game_visitor_team_score",
+					"value": "37",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8080/post/createGame",
+			"description": "used for creating a game",
+			"descriptionFormat": "html",
+			"time": 1508875005958,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "60ece5fc-8be7-776e-b533-4f376873e4cf",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/delete/deleteGame",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/delete/deleteGame",
+			"description": "used for deleting games",
+			"descriptionFormat": "html",
+			"time": 1508878417740,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "6a8b4670-0ff2-ec7d-4bef-3579c5d3106f",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/get/viewGame/59ef98b44a1558088552891c",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+			"data": [
+				{
+					"key": "_id",
+					"value": "59ef9a6a4a1558088552891e",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8080/get/viewGame",
+			"description": "used for getting a specific game",
+			"descriptionFormat": "html",
+			"time": 1508878219311,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "ae6ccbcf-c4c3-b296-f2f0-798c050d99e6",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/get/viewGamesByDate",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/get/viewGamesByDate",
+			"description": "used for getting all the games",
+			"descriptionFormat": "html",
+			"time": 1508878390151,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "d42a3165-a88a-5610-f9f5-32370417211c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/viewUser/59ee4a781414290fa080a831",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+			"data": [
+				{
+					"key": "user_first_name",
+					"value": "Kathrune",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_last_name",
+					"value": "Goober",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_email",
+					"value": "goob@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_password",
+					"value": "123qweasdzxc",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_privilege",
+					"value": "MsaAdmin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8080/viewUser/:_id",
+			"description": "used for viewing individual user -- to make work have to enter the individual OID",
+			"descriptionFormat": "html",
+			"time": 1508789652880,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "de3fe001-2645-5303-3cac-4a660170bb6d",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/createUser",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "user_first_name",
+					"value": "Kathrune",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_last_name",
+					"value": "Goober",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_email",
+					"value": "goob@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_password",
+					"value": "123qweasdzxc",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_privilege",
+					"value": "MsaAdmin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508788874824,
+			"name": "http://localhost:8080/createUser",
+			"description": "used for creating a user",
+			"collectionId": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+			"responses": []
+		},
+		{
+			"id": "fc055e9c-fed8-9840-efb1-b2b46f61eaac",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/deleteUser",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "a4009ceb-14a8-e3f1-1765-ebdece3941a8",
+			"data": [
+				{
+					"key": "_id",
+					"value": "59ea2e4bee3d9c0ef83e5d94",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:8080/deleteUser",
+			"description": "used for deleting a user",
+			"descriptionFormat": "html",
+			"time": 1508788616428,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

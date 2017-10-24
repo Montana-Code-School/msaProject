@@ -37,7 +37,7 @@ exports.editUser = function(req, res) {
 exports.viewUsers = function(req, res) {
   //console.log(req.params._id);
   MsaUser.find({}, "user_first_name")
-    .sort([["user_first_name", "ascending"]]) //TODO why is this order strange
+    .sort([["user_first_name", "ascending"]])
     .exec(function(err, users) {
       console.log(users);
       res.json(users);

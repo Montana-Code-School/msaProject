@@ -3,7 +3,8 @@ var express = require("express");
 var router = express.Router();
 var msa_team_controller = require("./controllers/msaTeamController");
 var msa_user_controller = require("./controllers/msaUserController");
-var MsaTeam = require("./models/msaTeam");
+var MsaTeam = require("./models/msaTeam"); // do we use this???????????????????????
+var msa_game_controller = require("./controllers/msaGameController");
 var bodyParser = require("body-parser");
 //var routes = require("./routes");
 var app = express();
@@ -36,5 +37,14 @@ app.get("/get/viewTeams", msa_team_controller.viewTeams);
 
 //put variable routes last
 app.get("/get/viewTeam/:_id", msa_team_controller.viewTeam); //sending info via header
+
+// msa game
+app.post("/post/createGame", msa_game_controller.createGame);
+
+app.delete("/delete/deleteGame", msa_game_controller.deleteGame);
+app.put("/put/editGame", msa_game_controller.editGame);
+app.get("/get/viewGamesByDate", msa_game_controller.viewGamesByDate);
+app.get("/get/viewGame/:_id", msa_game_controller.viewGame);
+app.get("/get/viewGamesByTeam", msa_game_controller.viewGamesByTeam);
 
 app.listen(port);

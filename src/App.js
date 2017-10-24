@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import Login from "./pages/login";
 import Hub from "./pages/hub";
 import MsaTeamFind from "./components/msaTeamFind";
-//import Routes from "./routes";
-import Header from "./header";
 import MsaTeamProfile from "./components/msaTeamProfile";
+import MsaGameScheduleByTeam from "./components/msaGameScheduleByTeam";
+
 // let msafind = require("./src/components/msaTeamFind");
 export default class App extends Component {
   render() {
@@ -25,6 +25,7 @@ export default class App extends Component {
             <Route path="/viewTeams" component={MsaTeamFind} />
             <Route path="/login" component={Login} />
             <Route path="/viewTeam/:_id" component={MsaTeamProfile} />
+            <Route path="/viewGame/:_id" component={MsaGameScheduleByTeam} />
           </Switch>
         </div>
       </Router>

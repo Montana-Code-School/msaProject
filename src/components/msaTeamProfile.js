@@ -1,3 +1,5 @@
+import MsaGameScheduleByTeam from "./msaGameScheduleByTeam";
+
 import React, { Component } from "react";
 export default class MsaTeamFind extends Component {
   constructor(props) {
@@ -42,11 +44,11 @@ export default class MsaTeamFind extends Component {
         <div>
           Team Members:{" "}
           {this.state.team_member_user_name_OID.map(function(teamMember) {
-            return <p>{teamMember}</p>;
+            return <p key={teamMember}>{teamMember}</p>;
           })}
         </div>
-
         <div>Created on: {this.state.team_created_date}</div>
+        <MsaGameScheduleByTeam />
       </div>
     );
   }
