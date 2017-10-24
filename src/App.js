@@ -7,6 +7,7 @@ import Hub from "./pages/hub";
 import MsaTeamFind from "./components/msaTeamFind";
 //import Routes from "./routes";
 import Header from "./header";
+import MsaTeamProfile from "./components/msaTeamProfile";
 // let msafind = require("./src/components/msaTeamFind");
 export default class App extends Component {
   render() {
@@ -23,6 +24,7 @@ export default class App extends Component {
             <Route exact path="/" component={Hub} />
             <Route path="/viewTeams" component={MsaTeamFind} />
             <Route path="/login" component={Login} />
+            <Route path="/viewTeam/:_id" component={MsaTeamProfile} />
           </Switch>
         </div>
       </Router>

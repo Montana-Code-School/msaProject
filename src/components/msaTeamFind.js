@@ -29,19 +29,12 @@ export default class MsaTeamFind extends Component {
     return (
       <div>
         <h1>Missoula Softball Team List</h1>
-        <ul>
-          {this.state.teamList.map(function(team) {
-            return <li key={team._id}>{team.team_name}</li>;
-          })}
-        </ul>
+
+        {this.state.teamList.map(function(team) {
+          return <h5 key={team._id}>{team.team_name}</h5>;
+        })}
       </div>
     );
   }
 }
-//<h5>{this.state.team_list}</h5>
-
-// got rid of buttons in render code saved & commented out down below
-
-//<button onClick={this.buttonClicked.bind(this)}>Submit</button>
-
-//<button onClick={this.buttonClicked.bind(this)}>List Teams</button>
+//h5 key={team._id}>{team.team_name}</h5
