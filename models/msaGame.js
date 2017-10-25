@@ -4,12 +4,12 @@ var Schema = mongoose.Schema;
 
 var MsaGameSchema = mongoose.Schema({
   game_home_team_OID: {
-    type: String,
-    required: true
+    type: Schema.ObjectId,
+    ref: "MsaTeam"
   },
   game_visitor_team_OID: {
-    type: String,
-    required: true
+    type: Schema.ObjectId,
+    ref: "MsaTeam"
   },
   game_date: {
     type: Date,
