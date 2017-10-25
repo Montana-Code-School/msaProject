@@ -46,18 +46,34 @@ exports.viewGamesByDate = function(req, res) {
 };
 
 exports.viewGamesByTeam = function(req, res) {
+  var teamOID = req.body._id;
+  console.log("Req.dat.body is ", req.body);
   //console.log(req.params._id);
-  MsaGame.find({ game_home_team_OID: "59ea30ef14cf6d0f5a3338bc" }, function(
-    err,
-    game
-  ) {
-    console.log(game);
-    res.json(game);
-  });
-  //.sort([["game_date", "ascending"]])
-  //.exec(function(err, game) {
-}; //);
-//};
+  MsaGame.find(
+    {
+      $or: [{ game_home_team_OID: teamOID }, { game_visitor_team_OID: teamOID }]
+    },
+    function(err, game) {
+      console.log(game);
+      res.json(game);
+    }
+  );
+};
+//.sort([["game_date", "ascending"]])
+//.exec(function(err, game) {
+
+// MsaGame.find(
+//   {
+//     $or: [
+//       { game_home_team_OID: "59ea30ef14cf6d0f5a3338bc" },
+//       { game_visitor_team_OID: "59ea30ef14cf6d0f5a3338bc" }
+//     ]
+//   },
+//   function(err, game) {
+//     console.log(game);
+//     res.json(game);
+//   }
+// );
 
 exports.viewGame = function(req, res) {
   console.log(req.params._id);
