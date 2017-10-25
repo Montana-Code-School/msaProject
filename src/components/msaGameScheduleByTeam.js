@@ -7,7 +7,7 @@ export default class MsaGameScheduleByTeam extends Component {
   }
 
   componentDidMount() {
-    fetch("/get/viewGamesByTeam", {
+    fetch("/get/viewGamesByTeam/:teamOID", {
       method: "GET"
     })
       .then(response => {

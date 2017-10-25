@@ -46,18 +46,16 @@ exports.viewGamesByDate = function(req, res) {
 };
 
 exports.viewGamesByTeam = function(req, res) {
-  var teamOID = req.body._id;
-  console.log("Req.dat.body is ", req.body);
-  //console.log(req.params._id);
-  MsaGame.find(
-    {
-      $or: [{ game_home_team_OID: teamOID }, { game_visitor_team_OID: teamOID }]
-    },
-    function(err, game) {
+  var teamOID = req.params.teamId;
+  MsaGame.find({
+    $or: [{ game_home_team_OID: teamOID }, { game_visitor_team_OID: teamOID }]
+  })
+    .populate("game_home_team_OID")
+    .populate("game_visitor_team_OID")
+    .exec(function(err, game) {
       console.log(game);
       res.json(game);
-    }
-  );
+    });
 };
 //.sort([["game_date", "ascending"]])
 //.exec(function(err, game) {

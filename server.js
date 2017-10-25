@@ -45,6 +45,6 @@ app.delete("/delete/deleteGame", msa_game_controller.deleteGame);
 app.put("/put/editGame", msa_game_controller.editGame);
 app.get("/get/viewGamesByDate", msa_game_controller.viewGamesByDate);
 app.get("/get/viewGame/:_id", msa_game_controller.viewGame);
-app.get("/get/viewGamesByTeam", msa_game_controller.viewGamesByTeam);
+app.get("/get/viewGamesByTeam/:teamOID", msa_game_controller.viewGamesByTeam);
 
 app.listen(port);
