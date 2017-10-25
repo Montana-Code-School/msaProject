@@ -32,25 +32,20 @@ mongoose.connection.on(
 var msaUsers = [];
 
 function msaUserCreate(
-  user_name,
-  user_password,
-  user_first_name,
-  user_last_name,
-  user_privilege,
-  user_created_date,
-  user_team_name_OID_opt,
+  userPassword,
+  userEmail,
+  userFirstName,
+  userLastName,
+  userPrivilege,
   cb
 ) {
   msaUserDetail = {
-    user_name: user_name,
-    user_password: user_password,
-    user_first_name: user_first_name,
-    user_last_name: user_last_name,
-    user_privilege: user_privilege,
-    user_created_date: user_created_date
+    user_password: userPassword,
+    user_email: userEmail,
+    user_first_name: userFirstName,
+    user_last_name: userLastName,
+    user_privilege: userPrivilege
   };
-  if (user_team_name_OID_opt != false)
-    msaUserDetail.user_team_name_OID = user_team_name_OID_opt;
 
   var msaUser = new MsaUser(msaUserDetail);
 
@@ -69,61 +64,51 @@ function createUsers(cb) {
   async.parallel([
     function(callback) {
       msaUserCreate(
-        "Chuck",
         "Aa1234567890!@#$%^&*()_-+=~:;,./<>?",
+        "chuck@gmail.com",
         "Chuck",
         "Norris",
-        "MsaAdminPriv",
-        Date.now,
-        false,
+        "MsaAdmin",
         callback
       );
     },
     function(callback) {
       msaUserCreate(
-        "JohnDoe",
         "Aa1234567890!@#$%^&*()_-+=~:;,./<>?",
+        "walker@gmail.com",
+        "Cordell",
+        "Walker",
+        "MsaCaptain",
+        callback
+      );
+    },
+    function(callback) {
+      msaUserCreate(
+        "Aa1234567890!@#$%^&*()_-+=~:;,./<>?",
+        "txrngr@gmail.com",
         "John",
-        "Doe",
-        "MsaUserPriv",
-        Date.now,
-        false,
+        "Randall",
+        "MsaCaptain",
         callback
       );
     },
     function(callback) {
       msaUserCreate(
-        "BobWard03",
         "Aa1234567890!@#$%^&*()_-+=~:;,./<>?",
-        "Bob",
-        "Ward",
-        "MsaUserPriv",
-        Date.now,
-        false,
+        "jw@gmail.com",
+        "Jake",
+        "Wilder",
+        "MsaCaptain",
         callback
       );
     },
     function(callback) {
       msaUserCreate(
-        "RomaBrowder",
         "Aa1234567890!@#$%^&*()_-+=~:;,./<>?",
-        "Roma",
-        "Browder",
-        "MsaPublisherPriv",
-        Date.now,
-        false,
-        callback
-      );
-    },
-    function(callback) {
-      msaUserCreate(
-        "JaneDoe",
-        "Aa1234567890!@#$%^&*()_-+=~:;,./<>?",
-        "Jane",
-        "Doe",
-        "MsaPublisherPriv",
-        Date.now,
-        false,
+        "FrankieS@gmail.com",
+        "Frank",
+        "Shatter",
+        "MsaCaptain",
         callback
       );
     }

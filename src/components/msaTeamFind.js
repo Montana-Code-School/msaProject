@@ -25,6 +25,7 @@ export default class MsaTeamFind extends Component {
   }
 
   render() {
+    // TODO on line 39 and 38 fix the key prop error
     console.log(this.props.location.pathname);
     return (
       <div>

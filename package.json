@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "dependencies": {
+    "async": "^2.5.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongoose": "^4.12.3",
