@@ -7,7 +7,7 @@ export default class MsaGameScheduleByTeam extends Component {
   }
 
   componentDidMount() {
-    fetch("/get/viewGamesByTeam/:teamOID", {
+    fetch("/get/viewGamesByTeam/" + this.props.teamOID, {
       method: "GET"
     })
       .then(response => {
@@ -16,7 +16,7 @@ export default class MsaGameScheduleByTeam extends Component {
       })
       .then(gameList => {
         console.log(gameList);
-        // this.setState({ game_name: json.game_name });
+        //this.setState({ game_name: json.game_name });
         this.setState({ gameList: gameList });
       });
   }

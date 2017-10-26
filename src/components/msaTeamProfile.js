@@ -48,7 +48,7 @@ export default class MsaTeamFind extends Component {
           })}
         </div>
         <div>Created on: {this.state.team_created_date}</div>
-        <MsaGameScheduleByTeam />
+        <MsaGameScheduleByTeam teamOID={this.props.match.params._id} />
       </div>
     );
   }
