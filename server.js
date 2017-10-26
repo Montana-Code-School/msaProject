@@ -43,8 +43,10 @@ app.post("/post/createGame", msa_game_controller.createGame);
 
 app.delete("/delete/deleteGame", msa_game_controller.deleteGame);
 app.put("/put/editGame", msa_game_controller.editGame);
-app.get("/get/viewGamesByDate", msa_game_controller.viewGamesByDate);
-app.get("/get/viewGame/:_id", msa_game_controller.viewGame);
+app.get("/get/viewGames/", msa_game_controller.viewGames);
+app.get("/get/viewGamesByDate", msa_game_controller.viewGamesByDate); //Still need to set this up.
+
+app.get("/get/viewGame/:_id", msa_game_controller.viewGameByOID);
 app.get("/get/viewGamesByTeam/:teamOID", msa_game_controller.viewGamesByTeam);
 
 app.listen(port);

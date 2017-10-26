@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-export default class MsaGameScheduleByTeam extends Component {
+export default class MsaIndividualGame extends Component {
   constructor(props) {
     super(props);
     //this.state = { team_name: "" };
@@ -13,6 +13,7 @@ export default class MsaGameScheduleByTeam extends Component {
     };
   }
 
+  //
   componentDidMount() {
     fetch("/get/viewGame/" + this.props.match.params._id, {
       method: "GET" //,
@@ -21,24 +22,29 @@ export default class MsaGameScheduleByTeam extends Component {
       //}
     })
       .then(response => {
-        console.log(response);
+        console.log("this is response", response);
         return response.json();
       })
       .then(game => {
-        console.log(game);
+        console.log("game is", game);
         // this.setState({ team_name: json.team_name });
         this.setState(game);
       });
   }
 
   render() {
-    console.log(this.props.location.pathname);
+    // console.log(
+    //   "this.state.game_home_team_OID = ",
+    //   this.state.game_home_team_OID
+    // );
+    console.log("this is game ", this.state);
+
     return (
       <div>
-        <h1>Team Profile</h1>
+        <h1>Game Profile</h1>
         <div>
-          Teams: {this.state.game_home_team_OID} vs{" "}
-          {this.state.game_visitor_team_OID}
+          Teams: {this.state.game_home_team_OID.team_name} vs {" "}
+          {this.state.game_visitor_team_OID.team_name}
         </div>
         <div>
           Home Score: {this.state.game_home_team_score}, Visitor Score:

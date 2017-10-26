@@ -7,6 +7,8 @@ import Hub from "./pages/hub";
 import MsaTeamFind from "./components/msaTeamFind";
 import MsaTeamProfile from "./components/msaTeamProfile";
 import MsaGameScheduleByTeam from "./components/msaGameScheduleByTeam";
+import MsaViewGames from "./components/msaViewGames";
+import MsaIndividualGame from "./components/msaIndividualGame";
 
 // let msafind = require("./src/components/msaTeamFind");
 export default class App extends Component {
@@ -19,13 +21,16 @@ export default class App extends Component {
             <Link to="/viewTeams">Team list</Link>
             <br />
             <Link to="/login">Login</Link>
+            <br />
+            <Link to="/viewGames">Games</Link>
           </header>
           <Switch>
             <Route exact path="/" component={Hub} />
             <Route path="/viewTeams" component={MsaTeamFind} />
             <Route path="/login" component={Login} />
             <Route path="/viewTeam/:_id" component={MsaTeamProfile} />
-            <Route path="/viewGame/:_id" component={MsaGameScheduleByTeam} />
+            <Route path="/viewGame/:_id" component={MsaIndividualGame} />
+            <Route path="/viewGames" component={MsaViewGames} />
           </Switch>
         </div>
       </Router>
