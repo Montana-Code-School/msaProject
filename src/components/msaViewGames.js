@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../pages/game.css";
 export default class msaViewGames extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +29,7 @@ export default class msaViewGames extends Component {
     // TODO on line 39 and 38 fix the key prop error
     console.log(this.props.location.pathname);
     return (
-      <div>
+      <div className="GameList">
         <h1>Games List</h1>
 
         {this.state.gameList.map(function(game) {

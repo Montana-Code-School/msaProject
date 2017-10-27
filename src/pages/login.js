@@ -37,18 +37,22 @@ export default class SignUp extends Component {
 
   render() {
     return (
-      <div>
-        <p>Welcome to sign in</p>
-
-        <div>First name:</div>
-        <input type="text" onChange={this.changeName.bind(this)} />
-
-        <div>Password:</div>
-        <input type="password" onChange={this.changePassword.bind(this)} />
+      <div className="Login">
         <div>
-          <button onClick={this.buttonClicked.bind(this)}>Submit</button>
+          We apologize put this site is still in development and is currently
+          unavailable
         </div>
       </div>
     );
   }
 }
+// <p>Welcome to sign in</p>
+//
+// <div>First name:</div>
+// <input type="text" onChange={this.changeName.bind(this)} />
+//
+// <div>Password:</div>
+// <input type="password" onChange={this.changePassword.bind(this)} />
+// <div>
+//   <button onClick={this.buttonClicked.bind(this)}>Submit</button>
+// </div>

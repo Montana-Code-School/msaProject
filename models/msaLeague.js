@@ -10,9 +10,9 @@ var MsaLeagueSchema = mongoose.Schema({
     default: "Unassigned"
   },
 
-  league_season {
+  league_season: {
     type: String,
-    enum: ["Spring", "Fall","Unassigned"],
+    enum: ["Spring", "Fall", "Unassigned"],
     default: "Unassigned"
   },
   league_game_day: {

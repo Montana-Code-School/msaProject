@@ -43,7 +43,7 @@ export default class MsaIndividualGame extends Component {
       <div>
         <h1>Game Profile</h1>
         <div>
-          Teams: {this.state.game_home_team_OID.team_name} vs {" "}
+          Teams: {this.state.game_home_team_OID.team_name} &ensp; vs &ensp;
           {this.state.game_visitor_team_OID.team_name}
         </div>
         <div>
