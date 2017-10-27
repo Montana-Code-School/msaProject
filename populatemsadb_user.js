@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+//Run this 1
 
 console.log(
   "This script populates a some users to your database. ",

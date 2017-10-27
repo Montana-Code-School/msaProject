@@ -1,3 +1,5 @@
+//Run this 1
+
 console.log(
   "This script populates a some fields to your database. ",
   "Specified database as argument - ",
