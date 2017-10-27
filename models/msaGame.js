@@ -16,8 +16,8 @@ var MsaGameSchema = mongoose.Schema({
     required: true
   },
   game_field_OID: {
-    type: String,
-    required: true
+    type: Schema.ObjectId,
+    ref: "MsaField"
   },
   game_created_date: {
     type: Date,

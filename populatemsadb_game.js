@@ -1,5 +1,5 @@
 console.log(
-  "This script populates a some users to your database. ",
+  "This script populates a some games to your database. ",
   "Specified database as argument - ",
   "e.g.: populatedb mongodb://your_username:your_password@your_dabase_url"
 );
@@ -65,14 +65,16 @@ function msaGameCreate(
   });
 }
 
+//// TODO Will need the OBJ Ids from msaField
+
 function createGames(cb) {
   async.parallel([
     function(callback) {
       msaGameCreate(
-        "59f0f6fddca5c707fe217adb",
-        "59f0f6fddca5c707fe217adc",
+        // "59f0f6fddca5c707fe217adb",
+        // "59f0f6fddca5c707fe217adc",
         "4/23/2017 11:15",
-        "The Pits of Despair",
+        //"The Pits of Despair",
         9001,
         13,
         callback
@@ -80,10 +82,10 @@ function createGames(cb) {
     },
     function(callback) {
       msaGameCreate(
-        "59f0f6fddca5c707fe217adc",
-        "59f0f6fddca5c707fe217add",
+        // "59f0f6fddca5c707fe217adc",
+        // "59f0f6fddca5c707fe217add",
         "4/23/2017 10:15",
-        "The Pits of Despair",
+        //"The Pits of Despair",
         6783,
         4697,
         callback
@@ -94,7 +96,7 @@ function createGames(cb) {
         "59f0f6fddca5c707fe217adc",
         "59f0f6fddca5c707fe217adb",
         "4/30/2017 11:15",
-        "your final destination",
+        //"your final destination",
         6987,
         7896,
         callback

@@ -8,6 +8,7 @@ var MsaTeamSchema = mongoose.Schema({
     required: true
   },
 
+  ///////// NEED TO CHANGE TO DIVISION AND LEAGUE WILL BE ASSOCIATED
   // TODO League will be changed to league Schema
   team_league_OID: {
     type: String

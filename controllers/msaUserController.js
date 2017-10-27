@@ -1,5 +1,9 @@
 var MsaUser = require("../models/msaUser");
 var MsaTeam = require("../models/msaTeam");
+var MsaGame = require("../models/msaGame");
+var MsaField = require("../models/msaField");
+var MsaDivision = require("../models/msaDivision");
+var MsaLeague = require("../models/msaLeague");
 
 exports.createUser = function(req, res) {
   //construct the main create user function
