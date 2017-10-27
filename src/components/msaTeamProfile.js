@@ -8,7 +8,7 @@ export default class MsaTeamFind extends Component {
     this.state = {
       team_name: "",
       _id: "",
-      team_league_OID: "",
+      team_division_OID: "",
       team_owner_user_name_OID: "",
       team_member_user_name_OID: [],
       team_created_date: ""
@@ -39,7 +39,7 @@ export default class MsaTeamFind extends Component {
       <div>
         <h1>Team Profile</h1>
         <div>Team: {this.state.team_name}</div>
-        <div>League: {this.state.team_league_OID}</div>
+        <div>League: {this.state.team_division_OID}</div>
         <div>Created by: {this.state.team_owner_user_name_OID}</div>
         <div>
           Team Members:{" "}

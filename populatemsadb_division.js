@@ -1,3 +1,16 @@
+//Run this 2
+
+/// vars for the different divisions
+
+var mensSpring = "59f3599cd24ffa3d02f7926a",
+  mensFall = "59f3599cd24ffa3d02f7926b",
+  womensSpring = "59f3599cd24ffa3d02f7926c",
+  womensFall = "59f3599cd24ffa3d02f7926d",
+  coRecSpringTh = "59f3599cd24ffa3d02f7926f",
+  coRecSpringFr = "59f3599cd24ffa3d02f79270",
+  coRecSpringSu = "59f3599cd24ffa3d02f7926e",
+  coRecfFall = "59f3599cd24ffa3d02f79271";
+
 console.log(
   "This script populates a some divisions to your database. ",
   "Specified database as argument - ",
@@ -54,31 +67,65 @@ function msaDivisionCreate(divisionName, divisionLeagueOID, cb) {
   });
 }
 
+// mensSpring
+// mensFall
+// womensSpring
+// womensFall
+// coRecSpringTh
+// coRecSpringFr
+// coRecSpringSu
+// coRecfFall
+
 function createDivisions(cb) {
   async.parallel([
     function(callback) {
-      msaDivisionCreate("D", "REPLACE WITH LEAGUE OIDS", callback);
+      msaDivisionCreate("D", mensSpring, callback);
     },
     function(callback) {
-      msaDivisionCreate("E", "REPLACE WITH LEAGUE OIDS", callback);
+      msaDivisionCreate("D", coRecSpringFr, callback);
     },
     function(callback) {
-      msaDivisionCreate("E 1", "REPLACE WITH LEAGUE OIDS", callback);
+      msaDivisionCreate("E", mensSpring, callback);
     },
     function(callback) {
-      msaDivisionCreate("E 2", "REPLACE WITH LEAGUE OIDS", callback);
+      msaDivisionCreate("E", coRecSpringTh, callback);
     },
     function(callback) {
-      msaDivisionCreate("Over 45", "REPLACE WITH LEAGUE OIDS", callback);
+      msaDivisionCreate("E", coRecSpringFr, callback);
     },
     function(callback) {
-      msaDivisionCreate("Red", "REPLACE WITH LEAGUE OIDS", callback);
+      msaDivisionCreate("E 1", mensSpring, callback);
+    },
+
+    function(callback) {
+      msaDivisionCreate("E 1", coRecSpringFr, callback);
     },
     function(callback) {
-      msaDivisionCreate("White", "REPLACE WITH LEAGUE OIDS", callback);
+      msaDivisionCreate("E 1", coRecSpringSu, callback);
     },
     function(callback) {
-      msaDivisionCreate("Blue", "REPLACE WITH LEAGUE OIDS", callback);
+      msaDivisionCreate("E 2", coRecSpringSu, callback);
+    },
+    function(callback) {
+      msaDivisionCreate("Over 45", mensSpring, callback);
+    },
+    function(callback) {
+      msaDivisionCreate("Red", mensFall, callback);
+    },
+    function(callback) {
+      msaDivisionCreate("White", mensFall, callback);
+    },
+    function(callback) {
+      msaDivisionCreate("Blue", mensFall, callback);
+    },
+    function(callback) {
+      msaDivisionCreate("Red", coRecfFall, callback);
+    },
+    function(callback) {
+      msaDivisionCreate("White", coRecfFall, callback);
+    },
+    function(callback) {
+      msaDivisionCreate("Blue", coRecfFall, callback);
     }
   ]);
 }

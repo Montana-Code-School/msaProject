@@ -1,3 +1,5 @@
+//Run this 1
+
 console.log(
   "This script populates a some leagues to your database. ",
   "Specified database as argument - ",
@@ -77,6 +79,9 @@ function createLeagues(cb) {
     },
     function(callback) {
       msaLeagueCreate("CoRec", "Spring", "Friday", callback);
+    },
+    function(callback) {
+      msaLeagueCreate("CoRec", "Fall", "", callback);
     }
   ]);
 }

@@ -1,4 +1,31 @@
-#! /usr/bin/env node
+//Run this 3
+
+//Default User 59f3586a6690063cdbd0e4f4
+var defaultUser = "59f3586a6690063cdbd0e4f4",
+  chuckNorris = "59f3586a6690063cdbd0e4f4",
+  cordellWalker = "59f3586a6690063cdbd0e4f5",
+  jakeWilder = "59f3586a6690063cdbd0e4f7",
+  frankShatter = "59f3586a6690063cdbd0e4f8",
+  johnRandall = "59f3586a6690063cdbd0e4f6";
+
+//Default Divisions
+
+var mensSpringD = "59f3607f3af84e3d80a4a2bd",
+  mensSpringE1 = "59f3607f3af84e3d80a4a2c2",
+  coRecSpringFrD = "59f3607f3af84e3d80a4a2be",
+  coRecSpringFrE1 = "59f3607f3af84e3d80a4a2c3",
+  mensSpringWhite = "59f3607f3af84e3d80a4a2c8",
+  coRecSpringThE = "59f3607f3af84e3d80a4a2c0",
+  coRecSpringSuE2 = "59f3607f3af84e3d80a4a2c5",
+  coRecfFallRed = "59f3607f3af84e3d80a4a2ca",
+  mensSpringE = "59f3607f3af84e3d80a4a2bf",
+  coRecSpringSuE1 = "59f3607f3af84e3d80a4a2c4",
+  mensSpringBlue = "59f3607f3af84e3d80a4a2c9",
+  mensSpringRed = "59f3607f3af84e3d80a4a2c7",
+  coRecfFallBlue = "59f3607f3af84e3d80a4a2cc",
+  coRecSpringFrE = "59f3607f3af84e3d80a4a2c1",
+  mensSpringOver45 = "59f3607f3af84e3d80a4a2c6",
+  coRecfFallWhite = "59f3607f3af84e3d80a4a2cb";
 
 console.log(
   "This script populates a some users to your database. ",
@@ -36,14 +63,14 @@ var msaTeams = [];
 //this function is the main funtion that creates the new objects
 function msaTeamCreate(
   teamName,
-  teamLeagueOID,
+  teamDivisionOID,
   teamOwnerUserNameOID,
   teamMemberUserNameOID,
   cb
 ) {
   teamdetail = {
     team_name: teamName,
-    team_league_OID: teamLeagueOID
+    team_division_OID: teamDivisionOID
   };
   if (teamOwnerUserNameOID != false)
     teamdetail.team_owner_user_name_OID = teamOwnerUserNameOID;
@@ -62,33 +89,39 @@ function msaTeamCreate(
     cb(null, msaTeam);
   });
 }
+//
+// chuckNorris,
+// cordellWalker,
+// jakeWilder,
+// frankShatter,
+// johnRandall,
 
 function createTeams(cb) {
   async.parallel([
     function(callback) {
       msaTeamCreate(
         "Got Heem",
-        "Unassigned",
-        "59f0f5188b526607bbb77151",
-        ["59f0f5188b526607bbb77151"],
+        mensSpringD,
+        defaultUser,
+        [defaultUser, cordellWalker, jakeWilder, frankShatter, johnRandall],
         callback
       );
     },
     function(callback) {
       msaTeamCreate(
         "the ligning rats that eat rubber bollons",
-        "Mens",
-        "59f0f5188b526607bbb77152",
-        ["59f0f5188b526607bbb77152"],
+        mensSpringD,
+        defaultUser,
+        [defaultUser, cordellWalker, jakeWilder, frankShatter],
         callback
       );
     },
     function(callback) {
       msaTeamCreate(
         "AssHats",
-        "CoRec",
-        "59f0f5188b526607bbb77153",
-        ["59f0f5188b526607bbb77154", "59f0f5188b526607bbb77153"],
+        mensSpringD,
+        defaultUser,
+        [defaultUser, cordellWalker],
         callback
       );
     }
