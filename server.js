@@ -49,4 +49,11 @@ app.get("/get/viewGamesByDate", msa_game_controller.viewGamesByDate); //Still ne
 app.get("/get/viewGame/:_id", msa_game_controller.viewGameByOID);
 app.get("/get/viewGamesByTeam/:teamOID", msa_game_controller.viewGamesByTeam);
 
+//msa field
+app.post("/post/createField", msa_field_controller.createField);
+app.delete("/delete/deleteField", msa_field_controller.deleteField);
+//app.put("/put/editField", msa_field_controller.editField);
+app.get("/get/viewFields", msa_field_controller.viewFields);
+app.get("/get/viewField/:_id", msa_field_controller.viewField);
+
 app.listen(port);
