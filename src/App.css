@@ -3,15 +3,25 @@
 }
 
 .App-header {
-  background-image: url("https://nevadapreps.com/wp-content/uploads/2017/05/8591796_web1_thinkstockphotos-softball-93460049.jpg");
-  background-size: 1000px 350px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: rgb(215, 31, 214);
   padding: 1px;
   padding-top: -1px;
-  color: white;
+  color: rgb(246, 230, 18);
 }
 
 .App-title {
   font-size: 1.5em;
+}
+
+:root {
+  --main-bg-color: pink;
+}
+
+body {
+  background-color: url("https://nevadapreps.com/wp-content/uploads/2017/05/8591796_web1_thinkstockphotos-softball-93460049.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -29,7 +29,7 @@ export default class msaViewGames extends Component {
     // TODO on line 39 and 38 fix the key prop error
     console.log(this.props.location.pathname);
     return (
-      <div className="GameList">
+      <div>
         <h1>Games List</h1>
 
         {this.state.gameList.map(function(game) {
