@@ -61,7 +61,7 @@ exports.viewFields = function(req, res) {
     });
 };
 
-exports.viewField = function(req, res) {
+exports.fieldProfile = function(req, res) {
   console.log(req.params._id);
   MsaField.findById(req.params._id, function(err, field) {
     console.log(field);

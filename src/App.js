@@ -4,20 +4,23 @@ import "./App.css";
 import { Link } from "react-router-dom";
 import Login from "./pages/login";
 import Hub from "./pages/hub";
+
+//Import team components
 import MsaTeamFind from "./components/msaTeamFind";
 import MsaTeamProfile from "./components/msaTeamProfile";
+//Import game components
 import MsaGameScheduleByTeam from "./components/msaGameScheduleByTeam";
 import MsaViewGames from "./components/msaViewGames";
-import MsaViewLeagues from "./components/msaViewLeagues";
 import MsaIndividualGame from "./components/msaIndividualGame";
-<<<<<<< HEAD
+// import league components
+import MsaViewLeagues from "./components/msaViewLeagues";
 import MsaLeagueProfile from "./components/msaLeagueProfile";
+//import division components
 import MsaViewDivisions from "./components/msaViewDivisions";
 import MsaDivisionProfile from "./components/msaDivisionProfile";
-=======
+//import field components
 import MsaViewFields from "./components/msaViewFields";
 import MsaFieldProfile from "./components/msaFieldProfile";
->>>>>>> 6ba7b329d4c033581b4700dbe886dc00abef57ff
 
 // let msafind = require("./src/components/msaTeamFind");
 export default class App extends Component {
@@ -41,15 +44,12 @@ export default class App extends Component {
             <Route path="/viewTeam/:_id" component={MsaTeamProfile} />
             <Route path="/viewGame/:_id" component={MsaIndividualGame} />
             <Route path="/viewGames" component={MsaViewGames} />
-<<<<<<< HEAD
             <Route path="/viewLeagues" component={MsaViewLeagues} />
             <Route path="/viewLeague/:_id" component={MsaLeagueProfile} />
             <Route path="/viewDivisions" component={MsaViewDivisions} />
             <Route path="/viewDivision/:_id" component={MsaDivisionProfile} />
-=======
             <Route path="/viewFields" component={MsaViewFields} />
             <Route path="/fieldProfile/:_id" component={MsaFieldProfile} />
->>>>>>> 6ba7b329d4c033581b4700dbe886dc00abef57ff
           </Switch>
         </div>
       </Router>

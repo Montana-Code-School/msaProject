@@ -10,16 +10,13 @@ var bodyParser = require("body-parser");
 var msa_team_controller = require("./controllers/msaTeamController");
 var msa_user_controller = require("./controllers/msaUserController");
 var msa_game_controller = require("./controllers/msaGameController");
-<<<<<<< HEAD
 var msa_league_controller = require("./controllers/msaLeagueController");
 var msa_division_controller = require("./controllers/msaDivisionController");
-
-=======
 var msa_field_controller = require("./controllers/msaFieldController");
 var bodyParser = require("body-parser");
 //var routes = require("./routes");
 var app = express();
->>>>>>> 6ba7b329d4c033581b4700dbe886dc00abef57ff
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // app.use("/msa")
@@ -61,7 +58,6 @@ app.get("/get/viewGamesByDate", msa_game_controller.viewGamesByDate); //Still ne
 app.get("/get/viewGame/:_id", msa_game_controller.viewGameByOID);
 app.get("/get/viewGamesByTeam/:teamOID", msa_game_controller.viewGamesByTeam);
 
-<<<<<<< HEAD
 // msa leagues
 app.get("/get/viewLeagues", msa_league_controller.viewLeagues);
 app.get("/get/viewLeague/:_id", msa_league_controller.viewLeague);
@@ -81,8 +77,6 @@ app.get("/get/viewDivision/:_id", msa_division_controller.viewDivisionByOID);
 //msa_division_controller.viewDivisionsByLeague
 //);
 
-//port
-=======
 //msa field
 app.post("/post/createField", msa_field_controller.createField);
 app.delete("/delete/deleteField", msa_field_controller.deleteField);
@@ -90,5 +84,4 @@ app.delete("/delete/deleteField", msa_field_controller.deleteField);
 app.get("/get/viewFields", msa_field_controller.viewFields);
 app.get("/get/fieldProfile/:_id", msa_field_controller.fieldProfile);
 
->>>>>>> 6ba7b329d4c033581b4700dbe886dc00abef57ff
 app.listen(port);
