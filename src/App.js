@@ -28,29 +28,33 @@ export default class App extends Component {
     var body = document.getElementsByTagName("body")[0];
     return (
       <Router>
-        <div className="App">
-          <header className="App-header">
-            <h1 className="App-title">Missoula Softball Association</h1>
-            <Link to="/viewTeams">Team list</Link>
-            <br />
-            <Link to="/login">Login</Link>
-            <br />
-            <Link to="/viewGames">Games</Link>
-          </header>
-          <Switch>
-            <Route exact path="/" component={Hub} />
-            <Route path="/viewTeams" component={MsaTeamFind} />
-            <Route path="/login" component={Login} />
-            <Route path="/viewTeam/:_id" component={MsaTeamProfile} />
-            <Route path="/viewGame/:_id" component={MsaIndividualGame} />
-            <Route path="/viewGames" component={MsaViewGames} />
-            <Route path="/viewLeagues" component={MsaViewLeagues} />
-            <Route path="/viewLeague/:_id" component={MsaLeagueProfile} />
-            <Route path="/viewDivisions" component={MsaViewDivisions} />
-            <Route path="/viewDivision/:_id" component={MsaDivisionProfile} />
-            <Route path="/viewFields" component={MsaViewFields} />
-            <Route path="/fieldProfile/:_id" component={MsaFieldProfile} />
-          </Switch>
+        <div>
+          <div className="Links">
+            <header className="App-header">
+              <h1 className="App-title">Missoula Softball Association</h1>
+              <Link to="/viewTeams">Team list</Link>
+              {/*<br />
+        <Link to="/login">Login</Link>*/}
+              <br />
+              <Link to="/viewGames">Games</Link>
+            </header>
+          </div>
+          <div className="App">
+            <Switch>
+              <Route exact path="/" component={Hub} />
+              <Route path="/viewTeams" component={MsaTeamFind} />
+              <Route path="/login" component={Login} />
+              <Route path="/viewTeam/:_id" component={MsaTeamProfile} />
+              <Route path="/viewGame/:_id" component={MsaIndividualGame} />
+              <Route path="/viewGames" component={MsaViewGames} />
+              <Route path="/viewLeagues" component={MsaViewLeagues} />
+              <Route path="/viewLeague/:_id" component={MsaLeagueProfile} />
+              <Route path="/viewDivisions" component={MsaViewDivisions} />
+              <Route path="/viewDivision/:_id" component={MsaDivisionProfile} />
+              <Route path="/viewFields" component={MsaViewFields} />
+              <Route path="/fieldProfile/:_id" component={MsaFieldProfile} />
+            </Switch>
+          </div>
         </div>
       </Router>
     );

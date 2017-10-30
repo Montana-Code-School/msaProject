@@ -1,15 +1,26 @@
 .App {
   text-align: center;
+  position: relative;
+  width: 50vw;
+  height: 86vh;
+  position: absolute;
+  top: 13.7%;
+  left: 25%;
+  right: 0%;
+  background-color: #a4c2a5;
+}
+
+.Links {
 }
 
 .App-header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgb(170, 5, 169);
+  background-color: #2e4052;
   padding: 1px;
   padding-top: -1px;
-  color: rgb(246, 230, 18);
+  color: rgb(0, 0, 0);
 }
 
 .App-title {
@@ -19,13 +30,10 @@
 :root {
   --main-bg-color: pink;
 }
-/*body {
-  --img1-image: url(http://www.niuhuskies.com/images/2016/9/15/16_IASB_BSU_0405_SW_062.JPG);
+
+.App {
 }
 
-body {
-  --img2-image: url(https://s.hswstatic.com/gif/fire-intro-pic.jpg);
-}*/
 body {
   background-image: url(http://www.niuhuskies.com/images/2016/9/15/16_IASB_BSU_0405_SW_062.JPG);
   background-size: cover;
