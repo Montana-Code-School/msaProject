@@ -29,15 +29,17 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-          <div className="Links">
-            <header className="App-header">
+          <div>
+            <div className="App-header">
               <h1 className="App-title">Missoula Softball Association</h1>
-              <Link to="/viewTeams">Team list</Link>
-              {/*<br />
+              <div className="Links">
+                <Link to="/viewTeams">Team list</Link> &nbsp; | &nbsp;
+                <Link to="/">Home Page</Link> &nbsp; | &nbsp;
+                {/*<br />
         <Link to="/login">Login</Link>*/}
-              <br />
-              <Link to="/viewGames">Games</Link>
-            </header>
+                <Link to="/viewGames">Games</Link>
+              </div>
+            </div>
           </div>
           <div className="App">
             <Switch>
