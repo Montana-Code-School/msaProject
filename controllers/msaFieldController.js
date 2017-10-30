@@ -50,12 +50,11 @@ exports.deleteField = function(req, res) {
 ////I chained another sort and removed
 ///the multiple arrays from the initial sort
 
-
 exports.viewFields = function(req, res) {
   //console.log(req.params._id);
   MsaField.find({})
-    .sort([["field_complex_name", "ascending"])
-    .sort([["field_name", "ascending"])
+    .sort(["field_complex_name", "ascending"])
+    .sort(["field_name", "ascending"])
     .exec(function(err, fields) {
       console.log(fields);
       res.json(fields);
@@ -69,3 +68,16 @@ exports.viewField = function(req, res) {
     res.json(field);
   });
 };
+
+/*
+exports.viewFields = function(req, res) {
+  //console.log(req.params._id);
+  MsaField.find({})
+    .sort([["field_complex_name", "ascending"])
+    .sort([["field_name", "ascending"])
+    .exec(function(err, fields) {
+      console.log(fields);
+      res.json(fields);
+    });
+};
+*/

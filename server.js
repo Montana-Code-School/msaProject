@@ -5,6 +5,7 @@ var msa_team_controller = require("./controllers/msaTeamController");
 var msa_user_controller = require("./controllers/msaUserController");
 var MsaTeam = require("./models/msaTeam"); // do we use this???????????????????????
 var msa_game_controller = require("./controllers/msaGameController");
+var msa_field_controller = require("./controllers/msaFieldController");
 var bodyParser = require("body-parser");
 //var routes = require("./routes");
 var app = express();

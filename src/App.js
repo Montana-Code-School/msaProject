@@ -15,6 +15,7 @@ import MsaFieldProfile from "./components/msaFieldProfile";
 // let msafind = require("./src/components/msaTeamFind");
 export default class App extends Component {
   render() {
+    var body = document.getElementsByTagName("body")[0];
     return (
       <Router>
         <div className="App">
