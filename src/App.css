@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgb(215, 31, 214);
+  background-color: rgb(170, 5, 169);
   padding: 1px;
   padding-top: -1px;
   color: rgb(246, 230, 18);
@@ -19,9 +19,19 @@
 :root {
   --main-bg-color: pink;
 }
+/*body {
+  --img1-image: url(http://www.niuhuskies.com/images/2016/9/15/16_IASB_BSU_0405_SW_062.JPG);
+}
 
 body {
-  background-color: url("https://nevadapreps.com/wp-content/uploads/2017/05/8591796_web1_thinkstockphotos-softball-93460049.jpg");
-  background-repeat: no-repeat;
+  --img2-image: url(https://s.hswstatic.com/gif/fire-intro-pic.jpg);
+}*/
+body {
+  background-image: url(http://www.niuhuskies.com/images/2016/9/15/16_IASB_BSU_0405_SW_062.JPG);
   background-size: cover;
+  background-repeat: no-repeat;
 }
+/*background-image: url(http://www.niuhuskies.com/images/2016/9/15/16_IASB_BSU_0405_SW_062.JPG),
+  url(https://s.hswstatic.com/gif/fire-intro-pic.jpg);
+background-repeat: no-repeat, no-repeat;
+background-size: cover, auto;*/
