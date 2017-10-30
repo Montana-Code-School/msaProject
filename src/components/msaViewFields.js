@@ -1,24 +1,27 @@
 import React, { Component } from "react";
 import "../pages/game.css";
-export default class msaViewGames extends Component {
+export default class msaViewFields extends Component {
   constructor(props) {
     super(props);
-    //this.state = { game_name: "" };
-    this.state = { gameList: [] };
+    //this.state = { field_name: "" };
+    this.state = { fieldList: [] };
   }
 
   componentDidMount() {
-    fetch("/get/viewGames", {
+    fetch("/get/viewFields", {
       method: "GET" //,
+      //  headers: {
+      //  _id: "59ea5bf2af93ae11af9c6eb9"
+      //}
     })
       .then(response => {
         console.log(response);
         return response.json();
       })
-      .then(gameList => {
-        console.log(gameList);
-
-        this.setState({ gameList: gameList });
+      .then(fieldList => {
+        console.log(fieldList);
+        // this.setState({ field_name: json.field_name });
+        this.setState({ fieldList: fieldList });
       });
   }
 
@@ -26,17 +29,17 @@ export default class msaViewGames extends Component {
     // TODO on line 39 and 38 fix the key prop error
     console.log(this.props.location.pathname);
     return (
-      <div>
-        <h1>Games List</h1>
+      <div className="FieldList">
+        <h1>Fields List</h1>
 
-        {this.state.gameList.map(function(game) {
+        {this.state.fieldList.map(function(field) {
           return (
             <div>
               <a
-                href={"http://localhost:3000/viewGame/" + game._id}
-                key={game._id}
+                href={"http://localhost:3000/viewFields/" + field._id}
+                key={field._id}
               >
-                {game.game_id} {game.game_date}
+                {field.field_id} {field.field_date}
               </a>
             </div>
           );
