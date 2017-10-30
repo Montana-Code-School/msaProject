@@ -1,13 +1,18 @@
+//import mods
+
 var mongoose = require("mongoose");
 var express = require("express");
+var app = express();
 var router = express.Router();
+var bodyParser = require("body-parser");
+
+//import controllers
 var msa_team_controller = require("./controllers/msaTeamController");
 var msa_user_controller = require("./controllers/msaUserController");
-var MsaTeam = require("./models/msaTeam"); // do we use this???????????????????????
 var msa_game_controller = require("./controllers/msaGameController");
-var bodyParser = require("body-parser");
-//var routes = require("./routes");
-var app = express();
+var msa_league_controller = require("./controllers/msaLeagueController");
+var msa_division_controller = require("./controllers/msaDivisionController");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // app.use("/msa")
@@ -49,4 +54,24 @@ app.get("/get/viewGamesByDate", msa_game_controller.viewGamesByDate); //Still ne
 app.get("/get/viewGame/:_id", msa_game_controller.viewGameByOID);
 app.get("/get/viewGamesByTeam/:teamOID", msa_game_controller.viewGamesByTeam);
 
+// msa leagues
+app.get("/get/viewLeagues", msa_league_controller.viewLeagues);
+app.get("/get/viewLeague/:_id", msa_league_controller.viewLeague);
+app.post("/post/createLeague", msa_league_controller.createLeague);
+app.delete("/delete/deleteLeague", msa_league_controller.deleteLeague);
+app.put("/put/editLeague", msa_league_controller.editLeague);
+
+// msa division
+
+app.get("/get/viewDivisions", msa_division_controller.viewDivisions);
+app.get("/get/viewDivision/:_id", msa_division_controller.viewDivisionByOID);
+//app.post("/post/createDivision", msa_division_controller.createDivision);
+//app.delete("/delete/deleteDivision", msa_division_controller.deleteDivision);
+//app.put("/put/editDivision", msa_division_controller.editDivision);
+//app.get(
+//"/get/viewDivisionsByLeague/:leagueOID",
+//msa_division_controller.viewDivisionsByLeague
+//);
+
+//port
 app.listen(port);

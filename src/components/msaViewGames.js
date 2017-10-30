@@ -10,9 +10,6 @@ export default class msaViewGames extends Component {
   componentDidMount() {
     fetch("/get/viewGames", {
       method: "GET" //,
-      //  headers: {
-      //  _id: "59ea5bf2af93ae11af9c6eb9"
-      //}
     })
       .then(response => {
         console.log(response);
@@ -20,7 +17,7 @@ export default class msaViewGames extends Component {
       })
       .then(gameList => {
         console.log(gameList);
-        // this.setState({ game_name: json.game_name });
+
         this.setState({ gameList: gameList });
       });
   }

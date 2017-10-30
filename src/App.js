@@ -8,7 +8,11 @@ import MsaTeamFind from "./components/msaTeamFind";
 import MsaTeamProfile from "./components/msaTeamProfile";
 import MsaGameScheduleByTeam from "./components/msaGameScheduleByTeam";
 import MsaViewGames from "./components/msaViewGames";
+import MsaViewLeagues from "./components/msaViewLeagues";
 import MsaIndividualGame from "./components/msaIndividualGame";
+import MsaLeagueProfile from "./components/msaLeagueProfile";
+import MsaViewDivisions from "./components/msaViewDivisions";
+import MsaDivisionProfile from "./components/msaDivisionProfile";
 
 // let msafind = require("./src/components/msaTeamFind");
 export default class App extends Component {
@@ -31,6 +35,10 @@ export default class App extends Component {
             <Route path="/viewTeam/:_id" component={MsaTeamProfile} />
             <Route path="/viewGame/:_id" component={MsaIndividualGame} />
             <Route path="/viewGames" component={MsaViewGames} />
+            <Route path="/viewLeagues" component={MsaViewLeagues} />
+            <Route path="/viewLeague/:_id" component={MsaLeagueProfile} />
+            <Route path="/viewDivisions" component={MsaViewDivisions} />
+            <Route path="/viewDivision/:_id" component={MsaDivisionProfile} />
           </Switch>
         </div>
       </Router>
