@@ -54,6 +54,6 @@ app.post("/post/createField", msa_field_controller.createField);
 app.delete("/delete/deleteField", msa_field_controller.deleteField);
 //app.put("/put/editField", msa_field_controller.editField);
 app.get("/get/viewFields", msa_field_controller.viewFields);
-app.get("/get/viewField/:_id", msa_field_controller.viewField);
+app.get("/get/fieldProfile/:_id", msa_field_controller.fieldProfile);
 
 app.listen(port);

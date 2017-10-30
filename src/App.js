@@ -9,6 +9,8 @@ import MsaTeamProfile from "./components/msaTeamProfile";
 import MsaGameScheduleByTeam from "./components/msaGameScheduleByTeam";
 import MsaViewGames from "./components/msaViewGames";
 import MsaIndividualGame from "./components/msaIndividualGame";
+import MsaViewFields from "./components/msaViewFields";
+import MsaFieldProfile from "./components/msaFieldProfile";
 
 // let msafind = require("./src/components/msaTeamFind");
 export default class App extends Component {
@@ -17,7 +19,7 @@ export default class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <h1 className="App-title">Welcome to Softball Mania</h1>
+            <h1 className="App-title">Missoula Softball Association</h1>
             <Link to="/viewTeams">Team list</Link>
             <br />
             <Link to="/login">Login</Link>
@@ -31,6 +33,8 @@ export default class App extends Component {
             <Route path="/viewTeam/:_id" component={MsaTeamProfile} />
             <Route path="/viewGame/:_id" component={MsaIndividualGame} />
             <Route path="/viewGames" component={MsaViewGames} />
+            <Route path="/viewFields" component={MsaViewFields} />
+            <Route path="/fieldProfile/:_id" component={MsaFieldProfile} />
           </Switch>
         </div>
       </Router>
