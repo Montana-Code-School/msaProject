@@ -5,7 +5,7 @@ var express = require("express");
 var app = express();
 var router = express.Router();
 var bodyParser = require("body-parser");
-
+var path = require("path");
 //import controllers
 var msa_team_controller = require("./controllers/msaTeamController");
 var msa_user_controller = require("./controllers/msaUserController");
@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 // mongoose.connect(config.database, {
 //   useMongoClient: true
 // });
-var msaMongoDb = "mongodb://localhost:27017/msa";
+var msaMongoDb = process.env.MONGODB_URI || "mongodb://localhost:27017/msa";
 var port = process.env.PORT || 8080; // used to create, sign, and verify tokens
 var db = mongoose.connection;
 mongoose.connect(msaMongoDb, {
@@ -83,5 +83,8 @@ app.delete("/delete/deleteField", msa_field_controller.deleteField);
 //app.put("/put/editField", msa_field_controller.editField);
 app.get("/get/viewFields", msa_field_controller.viewFields);
 app.get("/get/fieldProfile/:_id", msa_field_controller.fieldProfile);
-
+app.use(express.static("build"));
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "public/index.html"));
+});
 app.listen(port);

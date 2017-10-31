@@ -38,36 +38,21 @@ export default class MsaIndividualGame extends Component {
       <div>
         <h1>Game Profile</h1>
         <div>
-          <a
-            href={
-              "http://localhost:3000/viewTeam/" +
-              this.state.game_home_team_OID._id
-            }
-          >
+          <a href={"/viewTeam/" + this.state.game_home_team_OID._id}>
             {this.state.game_home_team_OID.team_name}
           </a>
           &ensp; &ensp;
           {this.state.game_home_team_score}
         </div>
         <div>
-          <a
-            href={
-              "http://localhost:3000/viewTeam/" +
-              this.state.game_visitor_team_OID._id
-            }
-          >
+          <a href={"/viewTeam/" + this.state.game_visitor_team_OID._id}>
             {this.state.game_visitor_team_OID.team_name}
           </a>
           &ensp; &ensp;
           {this.state.game_visitor_team_score}
         </div>
         <div>
-          <a
-            href={
-              "http://localhost:3000/fieldProfile/" +
-              this.state.game_field_OID._id
-            }
-          >
+          <a href={"/fieldProfile/" + this.state.game_field_OID._id}>
             {" "}
             {this.state.game_field_OID.field_complex_name}&ensp;
             {this.state.game_field_OID.field_name}
@@ -81,9 +66,9 @@ export default class MsaIndividualGame extends Component {
   }
 }
 
-/*var gameHomeTeamUrl = "http://localhost:3000/viewTeam/" + this.state.game_home_team_OID._id;
-var game VisitorTeamUrl = "http://localhost:3000/viewTeam/" + this.state.game_visitor_team_OID._id;
-var gameFieldUrl = "http://localhost:3000/viewField/" + this.state.game_field_OID._id;
+/*var gameHomeTeamUrl = "/viewTeam/" + this.state.game_home_team_OID._id;
+var game VisitorTeamUrl = "/viewTeam/" + this.state.game_visitor_team_OID._id;
+var gameFieldUrl = "/viewField/" + this.state.game_field_OID._id;
 
 console.log(
   "this is home path ",

@@ -31,10 +31,7 @@ export default class MsaTeamFind extends Component {
         {this.state.teamList.map(function(team) {
           return (
             <div>
-              <a
-                href={"http://localhost:3000/viewTeam/" + team._id}
-                key={team._id}
-              >
+              <a href={"/viewTeam/" + team._id} key={team._id}>
                 {team.team_name}
               </a>
             </div>

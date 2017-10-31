@@ -40,7 +40,7 @@ export default class MsaGameScheduleByTeam extends Component {
           }
           let gameDateFormatted = moment(game.game_date).format("MM-DD-YY");
           let gameTimeFormatted = moment(game.game_date).format("HH:MM");
-          let gameProfileUrl = "http://localhost:3000/viewGame/" + game._id;
+          let gameProfileUrl = "/viewGame/" + game._id;
           console.log("utc unformatted = ", game.game_date);
           console.log("utc formatted = ", gameDateFormatted);
 

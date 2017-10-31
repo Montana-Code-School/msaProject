@@ -33,41 +33,20 @@ export default class msaViewGames extends Component {
         {this.state.gameList.map(function(game) {
           return (
             <div>
-              <a
-                href={"http://localhost:3000/viewGame/" + game._id}
-                key={game._id}
-              >
+              <a href={"/viewGame/" + game._id} key={game._id}>
                 {moment(game.game_date).format("MM-DD-YY")}
                 &ensp;
                 {moment(game.game_date).format("HH:MM")}
               </a>
               &ensp;
-              <a
-                href={
-                  "http://localhost:3000/viewTeam/" +
-                  game.game_visitor_team_OID._id
-                }
-              >
+              <a href={"/viewTeam/" + game.game_visitor_team_OID._id}>
                 {game.game_visitor_team_OID.team_name}
               </a>
-              &ensp; <a
-                href={"http://localhost:3000/viewGame/" + game._id}
-              />{" "}
-              &ensp;
-              <a
-                href={
-                  "http://localhost:3000/viewTeam/" +
-                  game.game_home_team_OID._id
-                }
-              >
+              &ensp; <a href={"/viewGame/" + game._id} /> &ensp;
+              <a href={"/viewTeam/" + game.game_home_team_OID._id}>
                 {game.game_home_team_OID.team_name}
               </a>&ensp;&ensp;
-              <a
-                href={
-                  "http://localhost:3000/fieldProfile/" +
-                  game.game_field_OID._id
-                }
-              >
+              <a href={"/fieldProfile/" + game.game_field_OID._id}>
                 {game.game_field_OID.field_complex_name}&ensp;
                 {game.game_field_OID.field_name}
               </a>{" "}

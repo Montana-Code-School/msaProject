@@ -34,10 +34,7 @@ export default class MsaViewLeagues extends Component {
         {this.state.leagueList.map(function(league) {
           return (
             <div>
-              <a
-                href={"http://localhost:3000/viewLeague/" + league._id}
-                key={league._id}
-              >
+              <a href={"/viewLeague/" + league._id} key={league._id}>
                 {league.league_name} &ensp; &ensp;{league.league_season} &ensp;
                 &ensp;{league.league_game_day}
               </a>

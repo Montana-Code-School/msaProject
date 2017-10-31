@@ -32,10 +32,7 @@ export default class msaViewDivisions extends Component {
         {this.state.divisionList.map(function(division) {
           return (
             <div>
-              <a
-                href={"http://localhost:3000/viewDivision/" + division._id}
-                key={division._id}
-              >
+              <a href={"viewDivision/" + division._id} key={division._id}>
                 {division.division_league_OID.league_name}&ensp; &ensp;
                 {division.division_name}
               </a>

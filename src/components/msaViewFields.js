@@ -35,10 +35,7 @@ export default class msaViewFields extends Component {
         {this.state.fieldList.map(function(field) {
           return (
             <div>
-              <a
-                href={"http://localhost:3000/viewFields/" + field._id}
-                key={field._id}
-              >
+              <a href={"/viewFields/" + field._id} key={field._id}>
                 {field.field_id} {field.field_date}
               </a>
             </div>
