@@ -31,14 +31,14 @@ export default class App extends Component {
         <div>
           <div>
             <div className="App-header">
-              <h1 className="App-title">Missoula Softball Association</h1>
-              <div className="Links">
+              <span className="App-title">Missoula Softball Association</span>
+              <span className="Links">
                 <Link to="/viewTeams">Team list</Link> &nbsp; | &nbsp;
                 <Link to="/">Home Page</Link> &nbsp; | &nbsp;
                 {/*<br />
         <Link to="/login">Login</Link>*/}
                 <Link to="/viewGames">Games</Link>
-              </div>
+              </span>
             </div>
           </div>
           <div className="App">

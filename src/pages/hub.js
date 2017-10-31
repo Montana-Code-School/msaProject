@@ -37,6 +37,7 @@ export default class Hub extends Component {
             src="http://i.huffpost.com/gen/1360581/thumbs/o-LAVA-900.jpg?1"
             alt=""
           />
+          //we have 6 photos running the last two are repeats
           <img
             src="https://stories.sandisk.com/assets/images/orig/lava_05.jpg"
             alt=""
