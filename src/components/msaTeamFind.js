@@ -8,10 +8,7 @@ export default class MsaTeamFind extends Component {
 
   componentDidMount() {
     fetch("/get/viewTeams", {
-      method: "GET" //,
-      //  headers: {
-      //  _id: "59ea5bf2af93ae11af9c6eb9"
-      //}
+      method: "GET"
     })
       .then(response => {
         console.log(response);

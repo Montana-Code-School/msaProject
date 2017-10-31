@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+var moment = require("moment");
 export default class MsaGameScheduleByTeam extends Component {
   constructor(props) {
     super(props);
@@ -37,11 +38,20 @@ export default class MsaGameScheduleByTeam extends Component {
           } else {
             teamToDisplay = "error in code consult msaGameScheduleByTeam";
           }
+          let gameDateFormatted = moment(game.game_date).format("MM-DD-YY");
+          let gameTimeFormatted = moment(game.game_date).format("HH:MM");
+          let gameProfileUrl = "http://localhost:3000/viewGame/" + game._id;
+          console.log("utc unformatted = ", game.game_date);
+          console.log("utc formatted = ", gameDateFormatted);
 
           return (
             <div>
-              <div key={game._id}>
-                {game.game_date} {teamToDisplay} {game.game_field_OID}
+              <div>
+                <a href={gameProfileUrl} key={game._id}>
+                  {gameDateFormatted} {gameTimeFormatted} {teamToDisplay}{" "}
+                  {game.game_field_OID.field_complex_name}&ensp;
+                  {game.game_field_OID.field_name}
+                </a>
               </div>
             </div>
           );

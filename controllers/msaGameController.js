@@ -55,6 +55,7 @@ exports.viewGamesByTeam = function(req, res) {
   })
     .populate("game_home_team_OID")
     .populate("game_visitor_team_OID")
+    .populate("game_field_OID")
     .sort([["game_date", "ascending"]])
     .exec(function(err, games) {
       if (err) {
@@ -65,24 +66,6 @@ exports.viewGamesByTeam = function(req, res) {
       }
     });
 };
-//.sort([["game_date", "ascending"]])
-//.exec(function(err, game) {
-
-// MsaGame.find({
-//   $or: [{ game_home_team_OID: teamOID }, { game_visitor_team_OID: teamOID }]
-// })
-//   .populate("game_home_team_OID")
-//   .populate("game_visitor_team_OID")
-//   .sort([["game_date", "ascending"]])
-//   .exec(function(err, games) {
-//     if (err) {
-//       res.status(500).json(err);
-//     } else {
-//       console.log("games", games);
-//       res.json(games);
-//     }
-//   });
-// };
 
 exports.viewGames = function(req, res) {
   //console.log(req.params._id);
@@ -101,6 +84,7 @@ exports.viewGameByOID = function(req, res) {
   MsaGame.findById(req.params._id)
     .populate("game_home_team_OID")
     .populate("game_visitor_team_OID")
+    .populate("game_field_OID")
     .exec(function(err, game) {
       console.log(game);
       res.json(game);

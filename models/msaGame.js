@@ -31,5 +31,8 @@ var MsaGameSchema = mongoose.Schema({
   }
 });
 
+MsaGameSchema.virtual("game_date_formatted").get(function() {
+  return moment(this.game_date).format("MMMM Do, YYYY");
+});
 //Export the Model
 module.exports = mongoose.model("MsaGame", MsaGameSchema);

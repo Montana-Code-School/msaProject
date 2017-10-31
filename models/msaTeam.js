@@ -21,12 +21,12 @@ var MsaTeamSchema = mongoose.Schema({
   // TODO type set to default in order to populate
   team_owner_user_name_OID: {
     type: Schema.Types.ObjectId,
-    ref: "MsaTeam"
+    ref: "MsaUser"
   },
   team_member_user_name_OID: [
     {
       type: Schema.Types.ObjectId,
-      ref: "MsaTeam"
+      ref: "MsaUser"
     }
   ]
 });

@@ -33,11 +33,18 @@ export default class MsaIndividualGame extends Component {
   }
 
   render() {
-    // console.log(
-    //   "this.state.game_home_team_OID = ",
-    //   this.state.game_home_team_OID
-    // );
-    console.log("this is game ", this.state);
+    let gameHomeTeamOID = this.state.game_home_team_OID._id;
+    let gameVisitorTeamOID = this.state.game_visitor_team_OID._id;
+    let gameFieldOID = this.state.game_field_OID._id;
+
+    console.log(
+      "this is home path ",
+      gameHomeTeamOID,
+      "this is visitor path ",
+      gameVisitorTeamOID,
+      "this is field path",
+      gameFieldOID
+    );
 
     return (
       <div>
@@ -50,7 +57,10 @@ export default class MsaIndividualGame extends Component {
           Home Score: {this.state.game_home_team_score}, Visitor Score:
           {this.state.game_visitor_team_score}
         </div>
-        <div>Field: {this.state.game_field_OID}</div>
+        <div>
+          Field: {this.state.game_field_OID.field_complex_name}&ensp;
+          {this.state.game_field_OID.field_name}
+        </div>
         <div>Date: {this.state.game_date}</div>
 
         <div>Created on: {this.state.game_created_date}</div>
@@ -58,3 +68,7 @@ export default class MsaIndividualGame extends Component {
     );
   }
 }
+
+/*let gameHomeTeamUrl = ("http://localhost:3000/viewTeam/" + gameHomeTeamOID);
+let game VisitorTeamUrl = ("http://localhost:3000/viewTeam/" + gameVisitorTeamOID);
+let gameFieldUrl = ("http://localhost:3000/viewField/" + gameFieldOID);*/

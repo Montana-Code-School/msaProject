@@ -1,14 +1,16 @@
 import MsaGameScheduleByTeam from "./msaGameScheduleByTeam";
 
 import React, { Component } from "react";
-export default class MsaTeamFind extends Component {
+export default class MsaTeamProfile extends Component {
   constructor(props) {
     super(props);
     //this.state = { team_name: "" };
     this.state = {
       team_name: "",
       _id: "",
-      team_division_OID: "",
+      team_division_OID: {
+        division_league_OID: {}
+      },
       team_owner_user_name_OID: "",
       team_member_user_name_OID: [],
       team_created_date: ""
@@ -34,20 +36,32 @@ export default class MsaTeamFind extends Component {
   }
 
   render() {
-    console.log(this.props.location.pathname);
+    let divisionObj = this.state.team_division_OID.division_league_OID
+      .league_name;
+
+    console.log(divisionObj);
+
     return (
       <div>
-        <h1>Team Profile</h1>
-        <div>Team: {this.state.team_name}</div>
-        <div>League: {this.state.team_division_OID}</div>
-        <div>Created by: {this.state.team_owner_user_name_OID}</div>
+        <h1>
+          <div>{this.state.team_name}</div>
+        </h1>
+
+        <div>Division: {this.state.team_division_OID.division_name}</div>
         <div>
-          Team Members:{" "}
+          Captain: {this.state.team_owner_user_name_OID.user_first_name}&ensp;
+          {this.state.team_owner_user_name_OID.user_last_name}
+        </div>
+        <div>
+          Roster:{" "}
           {this.state.team_member_user_name_OID.map(function(teamMember) {
-            return <p key={teamMember}>{teamMember}</p>;
+            return (
+              <p key={teamMember._id}>
+                {teamMember.user_first_name} {teamMember.user_last_name}
+              </p>
+            );
           })}
         </div>
-        <div>Created on: {this.state.team_created_date}</div>
         <MsaGameScheduleByTeam teamOID={this.props.match.params._id} />
       </div>
     );
