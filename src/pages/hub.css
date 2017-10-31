@@ -29,11 +29,11 @@ header p {
 }
 
 #container {
-  width: 900px;
-  height: 792px;
+  width: auto;
+  height: 790px;
   overflow: hidden;
   margin: 50px auto;
-  background: white;
+  background: rgb(52, 175, 76);
 }
 
 /*keyframe animations*/
@@ -60,6 +60,7 @@ header p {
   }
   100% {
     margin-left: -5400px;
+    /* -5400 is equal to the sum of the width of all the pictures */
   }
 }
 
