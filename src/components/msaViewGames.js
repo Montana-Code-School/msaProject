@@ -26,6 +26,7 @@ export default class msaViewGames extends Component {
   render() {
     // TODO on line 39 and 38 fix the key prop error
     console.log(this.props.location.pathname);
+    var gameLink = "vs";
     return (
       <div>
         <h1>SCHEDULE</h1>
@@ -42,7 +43,13 @@ export default class msaViewGames extends Component {
               <a href={"/viewTeam/" + game.game_visitor_team_OID._id}>
                 {game.game_visitor_team_OID.team_name}
               </a>
-              &ensp; <a href={"/viewGame/" + game._id} /> &ensp;
+              &ensp;{" "}
+              <a href={"/viewGame/" + game._id}>
+                {" "}
+                &ensp;
+                {gameLink}{" "}
+              </a>
+              &ensp;
               <a href={"/viewTeam/" + game.game_home_team_OID._id}>
                 {game.game_home_team_OID.team_name}
               </a>&ensp;&ensp;
