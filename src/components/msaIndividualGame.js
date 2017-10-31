@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+var moment = require("moment");
 export default class MsaIndividualGame extends Component {
   constructor(props) {
     super(props);
@@ -33,42 +34,62 @@ export default class MsaIndividualGame extends Component {
   }
 
   render() {
-    let gameHomeTeamOID = this.state.game_home_team_OID._id;
-    let gameVisitorTeamOID = this.state.game_visitor_team_OID._id;
-    let gameFieldOID = this.state.game_field_OID._id;
-
-    console.log(
-      "this is home path ",
-      gameHomeTeamOID,
-      "this is visitor path ",
-      gameVisitorTeamOID,
-      "this is field path",
-      gameFieldOID
-    );
-
     return (
       <div>
         <h1>Game Profile</h1>
         <div>
-          Teams: {this.state.game_home_team_OID.team_name} &ensp; vs &ensp;
-          {this.state.game_visitor_team_OID.team_name}
+          <a
+            href={
+              "http://localhost:3000/viewTeam/" +
+              this.state.game_home_team_OID._id
+            }
+          >
+            {this.state.game_home_team_OID.team_name}
+          </a>
+          &ensp; &ensp;
+          {this.state.game_home_team_score}
         </div>
         <div>
-          Home Score: {this.state.game_home_team_score}, Visitor Score:
+          <a
+            href={
+              "http://localhost:3000/viewTeam/" +
+              this.state.game_visitor_team_OID._id
+            }
+          >
+            {this.state.game_visitor_team_OID.team_name}
+          </a>
+          &ensp; &ensp;
           {this.state.game_visitor_team_score}
         </div>
         <div>
-          Field: {this.state.game_field_OID.field_complex_name}&ensp;
-          {this.state.game_field_OID.field_name}
+          <a
+            href={
+              "http://localhost:3000/fieldProfile/" +
+              this.state.game_field_OID._id
+            }
+          >
+            {" "}
+            {this.state.game_field_OID.field_complex_name}&ensp;
+            {this.state.game_field_OID.field_name}
+          </a>
         </div>
-        <div>Date: {this.state.game_date}</div>
-
-        <div>Created on: {this.state.game_created_date}</div>
+        <div>
+          {moment(this.state.game_date).format("MM-DD-YY")}&ensp;{moment(this.state.game_date).format("HH:MM")}
+        </div>
       </div>
     );
   }
 }
 
-/*let gameHomeTeamUrl = ("http://localhost:3000/viewTeam/" + gameHomeTeamOID);
-let game VisitorTeamUrl = ("http://localhost:3000/viewTeam/" + gameVisitorTeamOID);
-let gameFieldUrl = ("http://localhost:3000/viewField/" + gameFieldOID);*/
+/*var gameHomeTeamUrl = "http://localhost:3000/viewTeam/" + this.state.game_home_team_OID._id;
+var game VisitorTeamUrl = "http://localhost:3000/viewTeam/" + this.state.game_visitor_team_OID._id;
+var gameFieldUrl = "http://localhost:3000/viewField/" + this.state.game_field_OID._id;
+
+console.log(
+  "this is home path ",
+  gameHomeTeamUrl,
+  "this is visitor path ",
+  game VisitorTeamUrl,
+  "this is field path",
+  gameFieldUrl
+);*/
