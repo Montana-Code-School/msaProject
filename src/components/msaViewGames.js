@@ -31,7 +31,6 @@ export default class msaViewGames extends Component {
         <h1>SCHEDULE</h1>
 
         {this.state.gameList.map(function(game) {
-          var gameLink = "vs";
           return (
             <div>
               <a
@@ -51,10 +50,9 @@ export default class msaViewGames extends Component {
               >
                 {game.game_visitor_team_OID.team_name}
               </a>
-              &ensp;{" "}
-              <a href={"http://localhost:3000/viewGame/" + game._id}>
-                {gameLink}
-              </a>{" "}
+              &ensp; <a
+                href={"http://localhost:3000/viewGame/" + game._id}
+              />{" "}
               &ensp;
               <a
                 href={
