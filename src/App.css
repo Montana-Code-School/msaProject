@@ -5,13 +5,16 @@
   position: fixed;
   left: 25%;
   right: 0%;
-  background-color: #a4c2a5;
+  background-color: rgba(164, 194, 165, 0.7);
+  /*rgba allows you a fourth parameter for opacity*/
 }
 
 .Links {
-  text-align: center;
-  font-size: 3;
-  font-weight: bolder;
+  font-size: 25px;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  right: auto;
 }
 
 .App-header {

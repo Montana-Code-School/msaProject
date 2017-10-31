@@ -32,12 +32,14 @@ export default class App extends Component {
           <div>
             <div className="App-header">
               <span className="App-title">Missoula Softball Association</span>
-              <span className="Links">
-                <Link to="/viewTeams">Team list</Link> &nbsp; | &nbsp;
-                <Link to="/">Home Page</Link> &nbsp; | &nbsp;
-                {/*<br />
+              <span>
+                <div className="Links">
+                  <Link to="/viewTeams">Team list</Link> &nbsp; | &nbsp;
+                  <Link to="/">Home Page</Link> &nbsp; | &nbsp;
+                  {/*<br />
         <Link to="/login">Login</Link>*/}
-                <Link to="/viewGames">Games</Link>
+                  <Link to="/viewGames">Games</Link>
+                </div>
               </span>
             </div>
           </div>
