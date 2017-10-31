@@ -13,7 +13,7 @@ export default class MsaFieldProfile extends Component {
   }
 
   componentDidMount() {
-    fetch("/get/fieldProfile/:_id" + this.props.match.params._id, {
+    fetch("/get/fieldProfile/" + this.props.match.params._id, {
       method: "GET" //,
       //  headers: {
       //  _id: "59ea5bf2af93ae11af9c6eb9"
@@ -31,13 +31,12 @@ export default class MsaFieldProfile extends Component {
   }
 
   render() {
-    console.log(this.props.location.pathname);
+    console.log(this.state);
     return (
       <div>
         <h1>Field Profile</h1>
         <div>Field Complex: {this.state.field_complex_name}</div>
         <div>Field Name: {this.state.field_name}</div>
-        <div>Created on: {this.state.field_created_date}</div>
       </div>
     );
   }

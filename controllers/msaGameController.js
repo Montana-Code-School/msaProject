@@ -72,6 +72,7 @@ exports.viewGames = function(req, res) {
   MsaGame.find({})
     .populate("game_home_team_OID")
     .populate("game_visitor_team_OID")
+    .populate("game_field_OID")
     .sort([["game_date", "ascending"]])
     .exec(function(err, games) {
       console.log(games);
