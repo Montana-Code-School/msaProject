@@ -27,34 +27,11 @@ exports.deleteField = function(req, res) {
   });
 };
 
-// TODO add edit field
-// exports.editField = function(req, res) {
-//   console.log(req.body);
-//   if (req.body.imLazy) {
-//     req.body.field_member_user_name_OID = req.body.field_member_user_name_OID[0].split(
-//       " "
-//     );
-//   }
-//   MsaField.findOneAndUpdate({ _id: req.body._id }, req.body, function(
-//     err,
-//     field
-//   ) {
-//     console.log(field);
-//     res.json(field);
-//   });
-// };
-
-////// KAT
-////// I updated you code to reflect the proper syntac.
-///// I removed the field names from the find on line 54
-////I chained another sort and removed
-///the multiple arrays from the initial sort
-
 exports.viewFields = function(req, res) {
   //console.log(req.params._id);
   MsaField.find({})
-    .sort(["field_complex_name", "ascending"])
-    .sort(["field_name", "ascending"])
+    .sort([["field_complex_name", "ascending"]])
+    .sort([["field_name", "ascending"]])
     .exec(function(err, fields) {
       console.log(fields);
       res.json(fields);
@@ -80,4 +57,27 @@ exports.viewFields = function(req, res) {
       res.json(fields);
     });
 };
+
+// TODO add edit field
+// exports.editField = function(req, res) {
+//   console.log(req.body);
+//   if (req.body.imLazy) {
+//     req.body.field_member_user_name_OID = req.body.field_member_user_name_OID[0].split(
+//       " "
+//     );
+//   }
+//   MsaField.findOneAndUpdate({ _id: req.body._id }, req.body, function(
+//     err,
+//     field
+//   ) {
+//     console.log(field);
+//     res.json(field);
+//   });
+// };
+
+////// KAT
+////// I updated you code to reflect the proper syntac.
+///// I removed the field names from the find on line 54
+////I chained another sort and removed
+///the multiple arrays from the initial sort
 */

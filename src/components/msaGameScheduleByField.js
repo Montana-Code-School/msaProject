@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 var moment = require("moment");
-export default class MsaGameScheduleByTeam extends Component {
+export default class MsaGameScheduleByField extends Component {
   constructor(props) {
     super(props);
     //this.state = { team_name: "" };
@@ -8,7 +8,8 @@ export default class MsaGameScheduleByTeam extends Component {
   }
 
   componentDidMount() {
-    fetch("/get/viewGamesByTeam/" + this.props.teamOID, {
+    console.log(this.props.fieldOID);
+    fetch("/get/viewGamesByField/" + this.props.fieldOID, {
       method: "GET"
     })
       .then(response => {
@@ -23,21 +24,13 @@ export default class MsaGameScheduleByTeam extends Component {
   }
 
   render() {
-    var teamProfileId = this.props.teamOID;
+    var fieldProfileId = this.props.fieldOID;
+    console.log(fieldProfileId);
     return (
       <div>
         <h1>SCHEDULE</h1>
 
         {this.state.gameList.map(function(game) {
-          var teamToDisplay;
-
-          if (teamProfileId === game.game_visitor_team_OID._id) {
-            teamToDisplay = game.game_home_team_OID.team_name;
-          } else if (teamProfileId === game.game_home_team_OID._id) {
-            teamToDisplay = game.game_visitor_team_OID.team_name;
-          } else {
-            teamToDisplay = "error in code consult msaGameScheduleByTeam";
-          }
           let gameDateFormatted = moment(game.game_date).format("MM-DD-YY");
           let gameTimeFormatted = moment(game.game_date).format("HH:MM");
           let gameProfileUrl = "/viewGame/" + game._id;
@@ -48,9 +41,13 @@ export default class MsaGameScheduleByTeam extends Component {
             <div>
               <div>
                 <a href={gameProfileUrl} key={game._id}>
-                  {gameDateFormatted} {gameTimeFormatted} {teamToDisplay}{" "}
-                  {game.game_field_OID.field_complex_name}&ensp;
-                  {game.game_field_OID.field_name}
+                  {gameDateFormatted}&ensp; {gameTimeFormatted}
+                  &ensp;
+                  {game.game_visitor_team_OID.team_name}
+                  &ensp; vs &ensp;
+                  {game.game_home_team_OID.team_name}
+                  &ensp;
+                  {game.game_field_OID.field_complex_name}
                 </a>
               </div>
             </div>

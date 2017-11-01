@@ -51,8 +51,15 @@ exports.editTeam = function(req, res) {
 exports.viewTeams = function(req, res) {
   //console.log(req.params._id);
   MsaTeam.find({})
-    .populate("team_division_OID")
-    .populate("team_division_OID.division_league_OID")
+    .populate([
+      {
+        path: "team_division_OID",
+
+        populate: {
+          path: "division_league_OID"
+        }
+      }
+    ])
     .populate("team_owner_user_name_OID")
     .populate("team_member_user_name_OID")
     .sort([["team_name", "ascending"]])

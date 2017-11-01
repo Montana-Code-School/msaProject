@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "../pages/game.css";
+var moment = require("moment");
+
 export default class msaViewDivisions extends Component {
   constructor(props) {
     super(props);

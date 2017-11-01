@@ -1,6 +1,6 @@
-import MsaGameScheduleByTeam from "./msaGameScheduleByTeam";
-
 import React, { Component } from "react";
+import MsaGameScheduleByTeam from "./msaGameScheduleByTeam";
+var moment = require("moment");
 export default class MsaTeamProfile extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +36,10 @@ export default class MsaTeamProfile extends Component {
   }
 
   render() {
-    let divisionObj = this.state.team_division_OID.division_league_OID
+    let leagueNameStr = this.state.team_division_OID.division_league_OID
       .league_name;
 
-    console.log(divisionObj);
+    console.log(leagueNameStr);
 
     return (
       <div>
@@ -47,7 +47,10 @@ export default class MsaTeamProfile extends Component {
           <div>{this.state.team_name}</div>
         </h1>
 
-        <div>Division: {this.state.team_division_OID.division_name}</div>
+        <div>
+          Division: {leagueNameStr} &ensp;
+          {this.state.team_division_OID.division_name}
+        </div>
         <div>
           Captain: {this.state.team_owner_user_name_OID.user_first_name}&ensp;
           {this.state.team_owner_user_name_OID.user_last_name}
