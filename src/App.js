@@ -34,11 +34,11 @@ export default class App extends Component {
               <span className="App-title">Missoula Softball Association</span>
               <span>
                 <div className="Links">
-                  <Link to="/viewTeams">Team list</Link> &nbsp; | &nbsp;
-                  <Link to="/">Home Page</Link> &nbsp; | &nbsp;
+                  <Link to="/">Home</Link> &nbsp; | &nbsp;
+                  <Link to="/viewTeams">Teams</Link> &nbsp; | &nbsp;
                   {/*<br />
         <Link to="/login">Login</Link>*/}
-                  <Link to="/viewGames">Games</Link>
+                  <Link to="/viewGames">Schedule</Link>
                 </div>
               </span>
             </div>

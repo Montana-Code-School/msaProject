@@ -1,5 +1,5 @@
 import MsaGameScheduleByTeam from "./msaGameScheduleByTeam";
-
+import "../pages/teamProfile.css";
 import React, { Component } from "react";
 export default class MsaTeamProfile extends Component {
   constructor(props) {
@@ -46,22 +46,31 @@ export default class MsaTeamProfile extends Component {
         <h1>
           <div>{this.state.team_name}</div>
         </h1>
+        <table id="TeamProfile">
+          <tr>
+            <th>Divison</th>
+            <th>Captain</th>
+            <th>Roster</th>
+          </tr>
+          <tr>
+            <td>{this.state.team_division_OID.division_name}</td>
+            <td>
+              {this.state.team_owner_user_name_OID.user_first_name}&ensp;
+              {this.state.team_owner_user_name_OID.user_last_name}
+            </td>
+            <td>
+              {this.state.team_member_user_name_OID.map(function(teamMember) {
+                return (
+                  <p key={teamMember._id}>
+                    {teamMember.user_first_name} {teamMember.user_last_name}
+                  </p>
+                );
+              })}
+            </td>
+          </tr>
+        </table>
 
-        <div>Division: {this.state.team_division_OID.division_name}</div>
-        <div>
-          Captain: {this.state.team_owner_user_name_OID.user_first_name}&ensp;
-          {this.state.team_owner_user_name_OID.user_last_name}
-        </div>
-        <div>
-          Roster:{" "}
-          {this.state.team_member_user_name_OID.map(function(teamMember) {
-            return (
-              <p key={teamMember._id}>
-                {teamMember.user_first_name} {teamMember.user_last_name}
-              </p>
-            );
-          })}
-        </div>
+        <table />
         <MsaGameScheduleByTeam teamOID={this.props.match.params._id} />
       </div>
     );

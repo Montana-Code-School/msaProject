@@ -12,8 +12,8 @@ export default class Hub extends Component {
     return (
       <div id="container">
         <header>
-          <h1>Animated Photo Banner</h1>
-          <p>Lorem ipsum dolor...</p>
+          <h1>Play Ball</h1>
+          <h2>Congrats on a great fall season!!!</h2>
         </header>
 
         {/* Each image is 900px by 600px */}
