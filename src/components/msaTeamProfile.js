@@ -1,6 +1,8 @@
 import MsaGameScheduleByTeam from "./msaGameScheduleByTeam";
 import "../pages/teamProfile.css";
 import React, { Component } from "react";
+
+var moment = require("moment");
 export default class MsaTeamProfile extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +38,10 @@ export default class MsaTeamProfile extends Component {
   }
 
   render() {
-    let divisionObj = this.state.team_division_OID.division_league_OID
+    let leagueNameStr = this.state.team_division_OID.division_league_OID
       .league_name;
 
-    console.log(divisionObj);
+    console.log(leagueNameStr);
 
     return (
       <div>

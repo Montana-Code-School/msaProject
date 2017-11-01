@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+var moment = require("moment");
 export default class MsaLeagueProfile extends Component {
   constructor(props) {
     super(props);

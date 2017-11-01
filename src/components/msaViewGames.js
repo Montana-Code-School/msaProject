@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "../pages/game.css";
 var moment = require("moment");
-export default class msaViewGames extends Component {
+
+export default class MsaViewGames extends Component {
   constructor(props) {
     super(props);
     //this.state = { game_name: "" };
@@ -34,19 +35,27 @@ export default class msaViewGames extends Component {
           <table id="GameTable">
             <tr>
               <th>Date</th>
+              <th>Time</th>
               <th>Home Team</th>
               <th>Away Team</th>
               <th>Field</th>
               <th>Result</th>
             </tr>
             {this.state.gameList.map(function(game) {
+              let gameDateFormatted = moment(game.game_date).format("MM-DD-YY");
               return (
                 <tr>
                   <td>
                     {" "}
-                    <a href={"/viewGame/" + game._id} key={game._id}>
+                    <a
+                      href={"/viewGamesByDate/" + gameDateFormatted}
+                      key={game._id}
+                    >
                       {moment(game.game_date).format("MM-DD-YY")}
-                      &ensp;
+                    </a>
+                  </td>
+                  <td>
+                    <a href={"/viewGame/" + game._id}>
                       {moment(game.game_date).format("HH:MM")}
                     </a>
                   </td>

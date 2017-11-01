@@ -12,6 +12,8 @@ import MsaTeamProfile from "./components/msaTeamProfile";
 import MsaGameScheduleByTeam from "./components/msaGameScheduleByTeam";
 import MsaViewGames from "./components/msaViewGames";
 import MsaIndividualGame from "./components/msaIndividualGame";
+import MsaViewGameDates from "./components/msaViewGameDates";
+import MsaViewGamesByDate from "./components/msaViewGamesByDate";
 // import league components
 import MsaViewLeagues from "./components/msaViewLeagues";
 import MsaLeagueProfile from "./components/msaLeagueProfile";
@@ -57,6 +59,11 @@ export default class App extends Component {
               <Route path="/viewDivision/:_id" component={MsaDivisionProfile} />
               <Route path="/viewFields" component={MsaViewFields} />
               <Route path="/fieldProfile/:_id" component={MsaFieldProfile} />
+              <Route path="/viewGameDates" component={MsaViewGameDates} />
+              <Route
+                path="/viewGamesByDate/:gameDate"
+                component={MsaViewGamesByDate}
+              />
             </Switch>
           </div>
         </div>

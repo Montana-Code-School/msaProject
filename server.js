@@ -49,14 +49,21 @@ app.get("/get/viewTeam/:_id", msa_team_controller.viewTeam); //sending info via 
 
 // msa game
 app.post("/post/createGame", msa_game_controller.createGame);
-
 app.delete("/delete/deleteGame", msa_game_controller.deleteGame);
 app.put("/put/editGame", msa_game_controller.editGame);
 app.get("/get/viewGames/", msa_game_controller.viewGames);
-app.get("/get/viewGamesByDate", msa_game_controller.viewGamesByDate); //Still need to set this up.
+//app.get("/get/viewGamesByDate", msa_game_controller.viewGamesByDate); //Still need to set this up.
 
 app.get("/get/viewGame/:_id", msa_game_controller.viewGameByOID);
 app.get("/get/viewGamesByTeam/:teamOID", msa_game_controller.viewGamesByTeam);
+app.get(
+  "/get/viewGamesByField/:fieldOID",
+  msa_game_controller.viewGamesByField
+);
+
+app.get("/get/viewGamesByDate/:gameDate", msa_game_controller.viewGamesByDate);
+
+//app.get("/get/viewGamesByDate/:gameDate", msa_game_controller.viewGamesByDate);
 
 // msa leagues
 app.get("/get/viewLeagues", msa_league_controller.viewLeagues);

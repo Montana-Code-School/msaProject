@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "../pages/game.css";
-export default class msaViewFields extends Component {
+var moment = require("moment");
+
+export default class MsaViewFields extends Component {
   constructor(props) {
     super(props);
     //this.state = { field_name: "" };
@@ -9,10 +11,7 @@ export default class msaViewFields extends Component {
 
   componentDidMount() {
     fetch("/get/viewFields", {
-      method: "GET" //,
-      //  headers: {
-      //  _id: "59ea5bf2af93ae11af9c6eb9"
-      //}
+      method: "GET"
     })
       .then(response => {
         console.log(response);
@@ -28,15 +27,17 @@ export default class msaViewFields extends Component {
   render() {
     // TODO on line 39 and 38 fix the key prop error
     console.log(this.props.location.pathname);
+    console.log(this.state.fieldList);
     return (
-      <div className="FieldList">
-        <h1>Fields List</h1>
+      <div>
+        <h1>MSA Softball Fields</h1>
 
         {this.state.fieldList.map(function(field) {
+          console.log(field);
           return (
             <div>
-              <a href={"/viewFields/" + field._id} key={field._id}>
-                {field.field_id} {field.field_date}
+              <a href={"/fieldProfile/" + field._id} key={field._id}>
+                {field.field_complex_name} {field.field_name}
               </a>
             </div>
           );
