@@ -1,0 +1,133 @@
+
+asshats = "59fa03ef91ff7d7021876e6c",
+idHitThat = "59fa03ef91ff7d7021876e6e",
+dirtyDollar = "59fa03ef91ff7d7021876e6d",
+madBatters = "59fa03ef91ff7d7021876e6f",
+snowyMtnRiffles = "59fa03ef91ff7d7021876e71",
+misfits = "59fa03ef91ff7d7021876e70",
+theBudz = "59fa03ef91ff7d7021876e72",
+areYouSerious = "59fa03ef91ff7d7021876e74",
+bennysLithiaFord = "59fa03ef91ff7d7021876e75",
+woolSox = "59fa03ef91ff7d7021876e73",
+despoPepsi = "59fa03ef91ff7d7021876e76",
+mslaHeatingAndCooling = "59fa03ef91ff7d7021876e7b",
+suckerPunch = "59fa03ef91ff7d7021876e80",
+peakHealthAndWellness = "59fa03ef91ff7d7021876e77",
+mTClub = "59fa03ef91ff7d7021876e7c",
+teamOhana = "59fa03ef91ff7d7021876e81",
+dirtySunrise = "59fa03ef91ff7d7021876e79",
+pitchesMeCrazy = "59fa03ef91ff7d7021876e7d",
+vWIce = "59fa03ef91ff7d7021876e82",
+jackson = "59fa03ef91ff7d7021876e7a",
+rAW  = "59fa03ef91ff7d7021876e7e",
+westsideLanesPFalls = "59fa03ef91ff7d7021876e83",
+problems99 = "59fa03ef91ff7d7021876e78",
+sandlotWarriors = "59fa03ef91ff7d7021876e7f"
+
+
+Game 1
+homeTeam1 = gotHeem,
+  visTeam1 = theLigningRatsThatEatRubberBollons,
+  gameDate1 = "04-23-2017 11:15,
+fieldLoc1 = mc11
+
+
+divisionBlue = "",
+leagueCoRec ="",
+
+//asshats
+function(callback) {msaGameCreate(dirtyDollar,asshats,"9-8-2017 19:25",ns,7,2,callback);},
+function(callback) {msaGameCreate(theBudz,asshats,"9-22-2017 21:45",mc2,3,12,callback);},
+function(callback) {msaGameCreate(idHitThat,asshats,"10-6-2017 20:35",ns,14,22,callback);},
+//dirtyDollar
+function(callback) {msaGameCreate(madBatters,dirtyDollar,"9-15-2017 21:45",ns,3,12,callback);},
+function(callback) {msaGameCreate(idHitThat,dirtyDollar,"9-29-2017 18:35",ns,13,12,callback);},
+function(callback) {msaGameCreate(theBudz,dirtyDollar,"10-6-2017 18:35",ns,13,12,callback);},
+//idHitThat
+function(callback) {msaGameCreate(theBudz,idHitThat,"8-25-2017 20:35",ns,14,22,callback);},
+function(callback) {msaGameCreate(madBatters,idHitThat,"9-8-2017 19:25",mc1,2,1,callback);},
+function(callback) {msaGameCreate(woolSox,idHitThat,"9-22-2017 19:25",mc1,2,1,callback);},
+//madBatters
+function(callback) {msaGameCreate(woolSox,madBatters,"8-25-2017 21:45",mc2,3,12,callback);},
+function(callback) {msaGameCreate(misfits,madBatters,"9-22-2017 19:25",ns,7,2,callback);},
+function(callback) {msaGameCreate(snowyMtnRiffles,madBatters,"10-6-2017 19:25",mc1,2,1,callback);},
+//misfits
+function(callback) {msaGameCreate(dirtyDollar,misfits,"8-25-2017 19:25",mc1,2,1,callback);},
+function(callback) {msaGameCreate(asshats,misfits,"9-15-2017 20:35",ns,14,22,callback);},
+function(callback) {msaGameCreate(snowyMtnRiffles,misfits,"9-29-2017 18:35",mc2,13,14,callback);},
+//snowyMtnRiffles
+function(callback) {msaGameCreate(asshats,snowyMtnRiffles,"8-25-2017 21:45",mc1,2,11,callback);},
+function(callback) {msaGameCreate(idHitThat,snowyMtnRiffles,"9-15-2017 21:45",mc2,3,12,callback);},
+function(callback) {msaGameCreate(dirtyDollar,snowyMtnRiffles,"9-22-2017 20:35",mc1,24,21,callback);},
+//theBudz
+function(callback) {msaGameCreate(misfits,theBudz,"9-8-2017 18:35",ns,13,12,callback);},
+function(callback) {msaGameCreate(woolSox,theBudz,"9-15-2017 19:25",ns,7,2,callback);},
+function(callback) {msaGameCreate(madBatters,theBudz,"9-29-2017 20:35",mc1,24,21,callback);},
+//woolSox
+function(callback) {msaGameCreate(snowyMtnRiffles,woolSox,"9-8-2017 18:35",mc1,23,11,callback);},
+function(callback) {msaGameCreate(asshats,woolSox,"9-29-2017 18:35",mc1,23,11,callback);},
+function(callback) {msaGameCreate(misfits,woolSox,"10-6-2017 21:45",ns,3,12,callback);},
+//areYouSerious
+function(callback) {msaGameCreate(despoPepsi,areYouSerious,"8-25-2017 19:25",mc2,7,3,callback);},
+function(callback) {msaGameCreate(peakHealthAndWellness,areYouSerious,"9-29-2017 20:35",mc2,14,20,callback);},
+function(callback) {msaGameCreatebennysLithiaFord,areYouSerious,"10-6-2017 19:25",mc2,7,3,callback);},
+//Benny's Lithia Ford
+function(callback) {msaGameCreate(peakHealthAndWellness,Benny's Lithia Ford,"8-25-2017 20:35",mc2,14,20,callback);},
+function(callback) {msaGameCreate(despoPepsi,Benny's Lithia Ford,"9-8-2017 20:35",mc2,14,20,callback);},
+function(callback) {msaGameCreate(areYouSerious,Benny's Lithia Ford,"9-22-2017 20:35",mc2,14,20,callback);},
+//despoPepsi
+function(callback) {msaGameCreate(areYouSerious,despoPepsi,"9-15-2017 19:25",mc2,7,3,callback);},
+function(callback) {msaGameCreatebennysLithiaFord,despoPepsi,"9-29-2017 21:45",mc2,3,12,callback);},
+function(callback) {msaGameCreate(peakHealthAndWellness,despoPepsi,"10-6-2017 20:35",mc2,14,20,callback);},
+//peakHealthAndWellness
+function(callback) {msaGameCreate(areYouSerious,peakHealthAndWellness,"9-8-2017 21:45",mc2,3,12,callback);},
+function(callback) {msaGameCreatebennysLithiaFord,peakHealthAndWellness,"9-15-2017 18:35",mc2,13,14,callback);},
+function(callback) {msaGameCreate(despoPepsi,peakHealthAndWellness,"9-22-2017 19:25",mc2,7,3,callback);},
+//problems99
+function(callback) {msaGameCreate(mslaHeatingAndCooling,problems99,"8-25-2017 19:25",ns,7,2,callback);},
+function(callback) {msaGameCreate(dirtySunrise,problems99,"9-8-2017 18:35",mc2,13,14,callback);},
+//dirtySunrise
+function(callback) {msaGameCreate(rAW.,dirtySunrise,"8-25-2017 18:35",ns,13,12,callback);},
+function(callback) {msaGameCreate(mslaHeatingAndCooling,dirtySunrise,"9-15-2017 20:35",mc1,24,21,callback);},
+function(callback) {msaGameCreate(sandlotWarriors,dirtySunrise,"9-22-2017 21:45",mc1,2,11,callback);},
+//jackson
+function(callback) {msaGameCreate(pitchesMeCrazy,jackson,"8-25-2017 21:45",ns,3,12,callback);},
+function(callback) {msaGameCreate(problems99,jackson,"9-15-2017 21:45",mc1,2,11,callback);},
+function(callback) {msaGameCreate(rAW.,jackson,"9-22-2017 20:35",ns,14,22,callback);},
+function(callback) {msaGameCreate(dirtySunrise,jackson,"9-29-2017 19:25",mc1,2,1,callback);},
+//mslaHeatingAndCooling
+function(callback) {msaGameCreate(pitchesMeCrazy,mslaHeatingAndCooling,"9-8-2017 21:45",mc1,2,11,callback);},
+function(callback) {msaGameCreate(rAW.,mslaHeatingAndCooling,"9-29-2017 21:45",ns,3,12,callback);},
+function(callback) {msaGameCreate(jackson,mslaHeatingAndCooling,"10-6-2017 18:35",mc2,13,14,callback);},
+//mTClub
+function(callback) {msaGameCreate(rAW.,mTClub,"9-8-2017 21:45",ns,3,12,callback);},
+function(callback) {msaGameCreate(sandlotWarriors,mTClub,"9-15-2017 19:25",mc1,2,1,callback);},
+function(callback) {msaGameCreate(teamOhana,mTClub,"9-22-2017 18:35",ns,13,12,callback);},
+//pitchesMeCrazy
+function(callback) {msaGameCreate(vWIce,pitchesMeCrazy,"9-22-2017 18:35",mc1,23,11,callback);},
+function(callback) {msaGameCreate(problems99,pitchesMeCrazy,"9-29-2017 19:25",ns,7,2,callback);},
+function(callback) {msaGameCreate(dirtySunrise,pitchesMeCrazy,"10-6-2017 18:35",mc1,23,11,callback);},
+//rAW.
+function(callback) {msaGameCreate(pitchesMeCrazy,rAW.,"9-15-2017 18:35",mc1,23,11,callback);},
+function(callback) {msaGameCreate(problems99,rAW.,"10-6-2017 21:45",mc1,2,11,callback);},
+//sandlotWarriors
+function(callback) {msaGameCreate(suckerPunch,sandlotWarriors,"9-8-2017 20:35",ns,14,22,callback);},
+function(callback) {msaGameCreate(westsideLanesPFalls,sandlotWarriors,"9-29-2017 21:45",mc1,2,11,callback);},
+function(callback) {msaGameCreate(vWIce,sandlotWarriors,"10-6-2017 19:25",ns,7,2,callback);},
+//suckerPunch
+function(callback) {msaGameCreate(problems99,suckerPunch,"9-22-2017 18:35",mc2,13,14,callback);},
+function(callback) {msaGameCreate(teamOhana,suckerPunch,"9-29-2017 19:25",mc2,7,3,callback);},
+function(callback) {msaGameCreate(mTClub,suckerPunch,"10-6-2017 21:45",mc2,3,12,callback);},
+//teamOhana
+function(callback) {msaGameCreate(sandlotWarriors,teamOhana,"8-25-2017 20:35",mc1,24,21,callback);},
+function(callback) {msaGameCreate(jackson,teamOhana,"9-8-2017 19:25",mc2,7,3,callback);},
+function(callback) {msaGameCreate(westsideLanesPFalls,teamOhana,"10-6-2017 20:35",mc1,24,21,callback);},
+//vWIce
+function(callback) {msaGameCreate(suckerPunch,vWIce,"8-25-2017 18:35",mc1,23,11,callback);},
+function(callback) {msaGameCreate(westsideLanesPFalls,vWIce,"9-8-2017 20:35",mc1,24,21,callback);},
+function(callback) {msaGameCreate(teamOhana,vWIce,"9-15-2017 20:35",mc2,14,20,callback);},
+function(callback) {msaGameCreate(mTClub,vWIce,"9-29-2017 20:35",ns,14,22,callback);},
+//westsideLanesPFalls
+function(callback) {msaGameCreate(mTClub,westsideLanesPFalls,"8-25-2017 18:35",mc2,13,14,callback);},
+function(callback) {msaGameCreate(suckerPunch,westsideLanesPFalls,"9-15-2017 18:35",ns,13,12,callback);},
+function(callback) {msaGameCreate(mslaHeatingAndCooling,westsideLanesPFalls,"9-22-2017 21:45",ns,3,12,callback);}

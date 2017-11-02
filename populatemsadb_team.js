@@ -1,31 +1,19 @@
 //Run this 3
 
 //Default User 59f3586a6690063cdbd0e4f4
-var defaultUser = "59f3586a6690063cdbd0e4f4",
-  chuckNorris = "59f3586a6690063cdbd0e4f4",
-  cordellWalker = "59f3586a6690063cdbd0e4f5",
-  jakeWilder = "59f3586a6690063cdbd0e4f7",
-  frankShatter = "59f3586a6690063cdbd0e4f8",
-  johnRandall = "59f3586a6690063cdbd0e4f6";
+
+var chuckNorris = "59f9fcab57bdc56f62eb89cf",
+  cordellWalker = "59f9fcab57bdc56f62eb89d0",
+  johnRandall = "59f9fcab57bdc56f62eb89d1",
+  jakeWilder = "59f9fcab57bdc56f62eb89d2",
+  frankShatter = "59f9fcab57bdc56f62eb89d3";
+var defaultUser = chuckNorris;
 
 //Default Divisions
 
-var mensSpringD = "59f3607f3af84e3d80a4a2bd",
-  mensSpringE1 = "59f3607f3af84e3d80a4a2c2",
-  coRecSpringFrD = "59f3607f3af84e3d80a4a2be",
-  coRecSpringFrE1 = "59f3607f3af84e3d80a4a2c3",
-  mensSpringWhite = "59f3607f3af84e3d80a4a2c8",
-  coRecSpringThE = "59f3607f3af84e3d80a4a2c0",
-  coRecSpringSuE2 = "59f3607f3af84e3d80a4a2c5",
-  coRecfFallRed = "59f3607f3af84e3d80a4a2ca",
-  mensSpringE = "59f3607f3af84e3d80a4a2bf",
-  coRecSpringSuE1 = "59f3607f3af84e3d80a4a2c4",
-  mensSpringBlue = "59f3607f3af84e3d80a4a2c9",
-  mensSpringRed = "59f3607f3af84e3d80a4a2c7",
-  coRecfFallBlue = "59f3607f3af84e3d80a4a2cc",
-  coRecSpringFrE = "59f3607f3af84e3d80a4a2c1",
-  mensSpringOver45 = "59f3607f3af84e3d80a4a2c6",
-  coRecfFallWhite = "59f3607f3af84e3d80a4a2cb";
+var coRecFallRed = "59fa00fe4aba976fbcea3649",
+  coRecFallBlue = "59fa00fe4aba976fbcea364b",
+  coRecFallWhite = "59fa00fe4aba976fbcea364a";
 
 console.log(
   "This script populates a some users to your database. ",
@@ -89,39 +77,245 @@ function msaTeamCreate(
     cb(null, msaTeam);
   });
 }
-//
-// chuckNorris,
-// cordellWalker,
-// jakeWilder,
-// frankShatter,
-// johnRandall,
 
 function createTeams(cb) {
   async.parallel([
     function(callback) {
       msaTeamCreate(
-        "Got Heem",
-        mensSpringD,
-        defaultUser,
-        [defaultUser, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        "Asshats",
+        coRecFallBlue,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
         callback
       );
     },
+
     function(callback) {
       msaTeamCreate(
-        "the ligning rats that eat rubber bollons",
-        mensSpringD,
-        defaultUser,
-        [defaultUser, cordellWalker, jakeWilder, frankShatter],
+        "Dirty Dollar",
+        coRecFallBlue,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
         callback
       );
     },
+
     function(callback) {
       msaTeamCreate(
-        "AssHats",
-        mensSpringD,
-        defaultUser,
-        [defaultUser, cordellWalker],
+        "Id Hit That",
+        coRecFallBlue,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Mad Batters",
+        coRecFallBlue,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Misfits",
+        coRecFallBlue,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Snowy Mtn Riffles",
+        coRecFallBlue,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "The Budz",
+        coRecFallBlue,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Wool Sox",
+        coRecFallBlue,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Are You Serious",
+        coRecFallRed,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Bennys Lithia Ford",
+        coRecFallRed,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Despo Pepsi",
+        coRecFallRed,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Peak Health And Wellness",
+        coRecFallRed,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "99 Problems",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Dirty Sunrise",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Jackson",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Msla Heating And Cooling",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "MT Club",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Pitches Me Crazy",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "R A W ",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Sandlot Warriors",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Sucker Punch",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Team Ohana",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "V W  Ice",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
+        callback
+      );
+    },
+
+    function(callback) {
+      msaTeamCreate(
+        "Westside Lanes P Falls",
+        coRecFallWhite,
+        chuckNorris,
+        [chuckNorris, cordellWalker, jakeWilder, frankShatter, johnRandall],
         callback
       );
     }

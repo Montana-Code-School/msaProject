@@ -2,14 +2,14 @@
 
 /// vars for the different divisions
 
-var mensSpring = "59f3599cd24ffa3d02f7926a",
-  mensFall = "59f3599cd24ffa3d02f7926b",
-  womensSpring = "59f3599cd24ffa3d02f7926c",
-  womensFall = "59f3599cd24ffa3d02f7926d",
-  coRecSpringTh = "59f3599cd24ffa3d02f7926f",
-  coRecSpringFr = "59f3599cd24ffa3d02f79270",
-  coRecSpringSu = "59f3599cd24ffa3d02f7926e",
-  coRecfFall = "59f3599cd24ffa3d02f79271";
+var mensSpring = "59f9fe3b76a2696f831de1e2",
+  womensSpring = "59f9fe3b76a2696f831de1e4",
+  mensFall = "59f9fe3b76a2696f831de1e3",
+  womensFall = "59f9fe3b76a2696f831de1e5",
+  coRecSpringTh = "59f9fe3b76a2696f831de1e7",
+  coRecSpringSu = "59f9fe3b76a2696f831de1e6",
+  coRecSpringFr = "59f9fe3b76a2696f831de1e8",
+  coRecFall = "59f9fe3b76a2696f831de1e9";
 
 console.log(
   "This script populates a some divisions to your database. ",
@@ -74,15 +74,21 @@ function msaDivisionCreate(divisionName, divisionLeagueOID, cb) {
 // coRecSpringTh
 // coRecSpringFr
 // coRecSpringSu
-// coRecfFall
+// coRecFall
 
 function createDivisions(cb) {
   async.parallel([
+    function(callback) {
+      msaDivisionCreate("D", womensSpring, callback);
+    },
     function(callback) {
       msaDivisionCreate("D", mensSpring, callback);
     },
     function(callback) {
       msaDivisionCreate("D", coRecSpringFr, callback);
+    },
+    function(callback) {
+      msaDivisionCreate("E", womensSpring, callback);
     },
     function(callback) {
       msaDivisionCreate("E", mensSpring, callback);
@@ -119,13 +125,13 @@ function createDivisions(cb) {
       msaDivisionCreate("Blue", mensFall, callback);
     },
     function(callback) {
-      msaDivisionCreate("Red", coRecfFall, callback);
+      msaDivisionCreate("Red", coRecFall, callback);
     },
     function(callback) {
-      msaDivisionCreate("White", coRecfFall, callback);
+      msaDivisionCreate("White", coRecFall, callback);
     },
     function(callback) {
-      msaDivisionCreate("Blue", coRecfFall, callback);
+      msaDivisionCreate("Blue", coRecFall, callback);
     }
   ]);
 }
