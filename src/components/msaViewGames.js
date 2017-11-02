@@ -27,44 +27,67 @@ export default class MsaViewGames extends Component {
   render() {
     // TODO on line 39 and 38 fix the key prop error
     console.log(this.props.location.pathname);
-    var gameLink = "vs";
+    var gameLink = "Score";
     return (
       <div>
         <h1>SCHEDULE</h1>
-
-        {this.state.gameList.map(function(game) {
-          let gameDateFormatted = moment(game.game_date).format("MM-DD-YY");
-          return (
-            <div>
-              <a href={"/viewGamesByDate/" + gameDateFormatted} key={game._id}>
-                {moment(game.game_date).format("MM-DD-YY")}
-              </a>
-              &ensp;
-              <a href={"/viewGame/" + game._id} key={game._id}>
-                {moment(game.game_date).format("HH:MM")}
-              </a>
-              &ensp; &ensp;
-              <a href={"/viewTeam/" + game.game_visitor_team_OID._id}>
-                {game.game_visitor_team_OID.team_name}
-              </a>
-              &ensp;{" "}
-              <a href={"/viewGame/" + game._id}>
-                {" "}
-                &ensp;
-                {gameLink}{" "}
-              </a>
-              &ensp;
-              <a href={"/viewTeam/" + game.game_home_team_OID._id}>
-                {game.game_home_team_OID.team_name}
-              </a>&ensp;&ensp;
-              <a href={"/fieldProfile/" + game.game_field_OID._id}>
-                {game.game_field_OID.field_complex_name}&ensp;
-                {game.game_field_OID.field_name}
-              </a>{" "}
-              &ensp;
-            </div>
-          );
-        })}
+        <div>
+          <table id="GameTable">
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Home Team</th>
+              <th>Away Team</th>
+              <th>Field</th>
+              <th>Result</th>
+            </tr>
+            {this.state.gameList.map(function(game) {
+              let gameDateFormatted = moment(game.game_date).format("MM-DD-YY");
+              return (
+                <tr>
+                  <td>
+                    {" "}
+                    <a
+                      href={"/viewGamesByDate/" + gameDateFormatted}
+                      key={game._id}
+                    >
+                      {moment(game.game_date).format("MM-DD-YY")}
+                    </a>
+                  </td>
+                  <td>
+                    <a href={"/viewGame/" + game._id}>
+                      {moment(game.game_date).format("HH:MM")}
+                    </a>
+                  </td>
+                  <td>
+                    {" "}
+                    <a href={"/viewTeam/" + game.game_home_team_OID._id}>
+                      {game.game_home_team_OID.team_name}
+                    </a>
+                  </td>
+                  <td>
+                    <a href={"/viewTeam/" + game.game_visitor_team_OID._id}>
+                      {game.game_visitor_team_OID.team_name}
+                    </a>
+                  </td>
+                  <td>
+                    <a href={"/fieldProfile/" + game.game_field_OID._id}>
+                      {game.game_field_OID.field_complex_name}&ensp;
+                      {game.game_field_OID.field_name}
+                    </a>
+                  </td>
+                  <td>
+                    <a href={"/viewGame/" + game._id}>
+                      {" "}
+                      &ensp;
+                      {gameLink}{" "}
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
+          </table>
+        </div>
       </div>
     );
   }

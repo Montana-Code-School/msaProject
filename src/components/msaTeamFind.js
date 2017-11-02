@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../pages/teams.css";
 var moment = require("moment");
 export default class MsaTeamFind extends Component {
   constructor(props) {
@@ -27,12 +28,12 @@ export default class MsaTeamFind extends Component {
     console.log(this.props.location.pathname);
     return (
       <div>
-        <h1>Missoula Softball Team List</h1>
+        <h1>Teams</h1>
 
         {this.state.teamList.map(function(team) {
           console.log(team);
           return (
-            <div>
+            <div id="Teams">
               <a href={"/viewTeam/" + team._id} key={team._id}>
                 {team.team_name}
               </a>

@@ -1,33 +1,30 @@
-.#GameTable {
+.#TeamProfile {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-#GameTable td,
-#GameTable th {
+#TeamProfile td,
+#TeamProfile th {
   border: 2px solid black;
   padding: 8px;
 }
 
-/*#GameTable tr:nth-child(even) {
+/*#TeamProfile tr:nth-child(even) {
   background-color: #f2f2f2;
 }*/
-#GameTable tr {
+#TeamProfile tr {
   background-color: white;
 }
-#GameTable tr:hover {
-  background-color: #ddd;
-}
 
-#GameTable th {
+#TeamProfile th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
   background-color: #000000;
   color: white;
 }
-#GameTable {
+#TeamProfile {
   width: 100%;
 }
 tr {

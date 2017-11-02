@@ -5,7 +5,7 @@
   position: fixed;
   left: 25%;
   right: 0%;
-  background-color: rgba(164, 194, 165, 0.7);
+  background-color: rgba(164, 194, 165, 0.6);
   /*rgba allows you a fourth parameter for opacity*/
 }
 
@@ -26,10 +26,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgb(164, 127, 55);
+  background-color: rgb(0, 0, 0);
   padding: 15px;
   padding-top: -1px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .App-title {

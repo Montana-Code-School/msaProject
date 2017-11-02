@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../pages/gameProfile.css";
 var moment = require("moment");
 export default class MsaIndividualGame extends Component {
   constructor(props) {
@@ -34,33 +35,46 @@ export default class MsaIndividualGame extends Component {
   }
 
   render() {
+    var gameLink = "Score";
     return (
       <div>
         <h1>Game Profile</h1>
-        <div>
-          <a href={"/viewTeam/" + this.state.game_home_team_OID._id}>
-            {this.state.game_home_team_OID.team_name}
-          </a>
-          &ensp; &ensp;
-          {this.state.game_home_team_score}
-        </div>
-        <div>
-          <a href={"/viewTeam/" + this.state.game_visitor_team_OID._id}>
-            {this.state.game_visitor_team_OID.team_name}
-          </a>
-          &ensp; &ensp;
-          {this.state.game_visitor_team_score}
-        </div>
-        <div>
-          <a href={"/fieldProfile/" + this.state.game_field_OID._id}>
-            {" "}
-            {this.state.game_field_OID.field_complex_name}&ensp;
-            {this.state.game_field_OID.field_name}
-          </a>
-        </div>
-        <div>
-          {moment(this.state.game_date).format("MM-DD-YY")}&ensp;{moment(this.state.game_date).format("HH:MM")}
-        </div>
+        <table id="GameProfile">
+          <tr>
+            <th>Date</th>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Field</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>
+              {moment(this.state.game_date).format("MM-DD-YY")}&ensp;{moment(this.state.game_date).format("HH:MM")}
+            </td>
+            <td>
+              {" "}
+              <a href={"/viewTeam/" + this.state.game_home_team_OID._id}>
+                {this.state.game_home_team_OID.team_name}
+              </a>
+            </td>
+            <td>
+              <a href={"/viewTeam/" + this.state.game_visitor_team_OID._id}>
+                {this.state.game_visitor_team_OID.team_name}
+              </a>
+            </td>
+            <td>
+              {" "}
+              <a href={"/fieldProfile/" + this.state.game_field_OID._id}>
+                {" "}
+                {this.state.game_field_OID.field_complex_name}&ensp;
+                {this.state.game_field_OID.field_name}
+              </a>
+            </td>
+            <td>
+              Home:{this.state.game_home_team_score} Away:{this.state.game_visitor_team_score}
+            </td>
+          </tr>
+        </table>
       </div>
     );
   }
